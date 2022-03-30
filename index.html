@@ -17,7 +17,7 @@
 
 <body>
     <!-- header -->
-    <header class="container">
+    <header>
         <!-- mobile navigation -->
         <div class="hamburger-menu">
             <span class="material-icons menu__trigger js-trigger">menu</span>
@@ -71,9 +71,27 @@
 
     <!-- promo section -->
     <section class="promo">
-        <h1>built for flight</h1>
-        <p>Introducing PRODUCT NAME</p>
-        <a href="#" class="btn">shop</a>
+        <div class="carousel">
+            <div class="slides">
+                <img src="https://picsum.photos/1280/720?random=1" alt="slide image" class="slide">
+                <img src="https://picsum.photos/1280/720?random=2" alt="slide image" class="slide">
+                <img src="https://picsum.photos/1280/720?random=3" alt="slide image" class="slide">
+            </div>
+
+            <div class="controls-2">
+                <div class="btn play-btn">P</div>
+                <div class="btn stop-btn">S</div>
+                <div class="btn timer-btn">T</div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="control prev-slide"><span class="material-icons-outlined">
+                west
+                </span></div>
+            <div class="control next-slide"><span class="material-icons-outlined">
+                east
+                </span>
+        </div>
     </section>
 
     <!-- categories -->
@@ -91,7 +109,7 @@
 
 
     <!-- footer -->
-    <footer class="footer container">
+    <footer class="footer">
         <div class="footer__wrapper">
             <section class="footer__container">
                 <div class="footer__newsletter">

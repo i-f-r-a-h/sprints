@@ -5,9 +5,12 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: end;
-    padding: 20px 0;
+    padding: 20px 50px;
+    top: 0;
+    width: 100%;
     position: fixed;
     background-color: rgb(255, 255, 255);
+    z-index: 9999;
 
     //logo
     .logo {
