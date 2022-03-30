@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+
+header,
+.promo,
+.cat,
+.top-products,
+.new-releases,
+.mailing-list,
+footer {
+    grid-area: auto / 1/ auto / 5;
+    border: 2px solid red;
+}
+
+@media (min-width:1000px) {
+    header,
+    .promo,
+    .cat,
+    .top-products,
+    .new-releases,
+    .mailing-list,
+    footer {
+        grid-area: auto / 1/ auto / 13;
+        border: 2px solid red;
+    }
+}

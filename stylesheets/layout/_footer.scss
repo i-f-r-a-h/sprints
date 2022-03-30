@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+
+    >* {
+        text-align: center;
+
+        @media (min-width:1000px) {
+            text-align: left;
+        }
+    }
+
+
+
+    background-color: black;
+    color: white;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        align-items: start;
+        justify-items: center;
+        padding: 200px 10px 50px 10px;
+    }
+
+
+    //newsletter
+    &__newsletter {
+
+        &__title {
+            margin-top: -100px;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+
+
+        &__form {
+            display: flex;
+            height: 60px;
+            margin: 20px 0 50px -5px;
+
+            input[type="text"] {
+                width: 80%;
+                padding-left: 20px;
+                border-radius: 20px 0 0 20px;
+            }
+
+            input[type="submit"] {
+                width: 20%;
+                border-radius: 0 20px 20px 0;
+            }
+        }
+
+    }
+
+    //links
+    &__links__items {
+        margin: 0 0 50px 0;
+
+        a {
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+
+
+    //socials
+    &__socials {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        &__icon {
+            border: 1px solid white;
+            padding: 10px 14px;
+            border-radius: 50%;
+            color: white;
+
+            .fa-brands {
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRINT Footwear</title>
+    <!-- icon kit -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7be4e2fa54.js" crossorigin="anonymous"></script>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="stylesheets/main.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="container">
+        <!-- mobile navigation -->
+        <div class="hamburger-menu">
+            <span class="material-icons menu__trigger js-trigger">menu</span>
+        </div>
+        <!-- navigation -->
+        <nav class="nav nav--primary ">
+            <ul class="nav__list nav-items-primary">
+                <li class="nav__list-item nav__list-item--active">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="shop.html">Women</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="shop.html">Men</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="shop.html">Kids</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="shop.html">Apparel</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="shop.html">Sale</a>
+                </li>
+                <li class="nav__list-item nav__list-item--hide">
+                    <a href="shop.html">Account</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- logo -->
+        <div class="logo">
+            <a href="index.html"><img class="logo" src="assets/logo/logo.svg" alt="sprints logo"></a>
+        </div>
+
+        <!-- icons -->
+        <div class="nav-icons">
+            <span class="material-icons">search</span>
+            <span class="material-icons material-icons--hide">person</span>
+            <span class="material-icons material-icons--hide">favorite_border</span>
+            <span class="material-icons">shopping_bag</span>
+        </div>
+    </header>
+
+
+    <main class="sign-up">
+        <section class="form__container">
+            <h2>Create an account</h2>
+            <form class="form form__signIn">
+                <!-- email -->
+                <label for="email">Email address
+                    <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your email...">
+                    <div class="error error--email"></div>
+                </label>
+                <!-- password -->
+                <label for="pwd">Password
+                    <input type="password" name="pwd" id="pwd" placeholder="Enter your password...">
+                    <div class="error error--pwd"></div>
+                </label>
+                <!-- confirm password -->
+                <label for="confirm-pwd">Confirm Password
+                    <input type="password" name="confirm-pwd" id="confirmPwd" placeholder="Repeat your password...">
+                    <div class="error error--confirmPwd"></div>
+                </label>
+                <!-- age -->
+                <label for="age">Enter your birthday
+                    <input type="date" name="bday" id="age" >
+                    <div class="error error--age"></div>
+
+                </label>
+
+
+                <!-- terms and condition -->
+
+                <label for="check"><input type="checkbox" name="check" id="check">I agree to the terms and conditions
+                    <div class="error error--check"></div>
+                </label>
+                <!-- submit button -->
+                <input type="button" value="submit">
+            </form>
+            <p>Already have an account? <a href="login.html">Log in here</a></p>
+        </section>
+
+    </main>
+
+
+    <!-- footer -->
+    <footer class="footer container">
+        <div class="footer__wrapper">
+            <section class="footer__container">
+                <div class="footer__newsletter">
+                    <h2 class="footer__newsletter__title">Join our community</h2>
+                    <p class="footer__newsletter__info">Enter your phone number so we can text you about secret stuff
+                        when you sign up for texts</p>
+                    <form class="footer__newsletter__form" action="#">
+                        <input type="number" name="" id="">
+                        <input type="submit" value="">
+                    </form>
+                </div>
+                <div class="footer__links">
+                    <ul class="footer__links__items">
+                        <li class="footer__links__item">
+                            <a href="" target="_blank">
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer__links__item">
+                            <a href="" target="_blank">
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer__links__item">
+                            <a href="" target="_blank">
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer__links__item">
+                            <a href="" target="_blank">
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer__links__item">
+                            <a href="" target="_blank">
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer__links__item">
+                            <a href="" target="_blank">
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer__links__item">
+                            <a href="" target="_blank">
+                                Home
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__socials">
+
+                    <li class="footer__socials__icon">
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </li>
+                    <li class="footer__socials__icon">
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="footer__socials__icon">
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="footer__socials__icon">
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </div>
+            </section>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© SPRINTS 2022. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- js scripts -->
+    <script src="js/form.js"></script>
+</body>
+
+</html>
