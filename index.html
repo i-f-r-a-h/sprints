@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SPRINT | Home</title>
     <!-- icon kit -->
     <link
@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/7be4e2fa54.js" crossorigin="anonymous"></script>
     <!-- stylesheets -->
     <link rel="stylesheet" href="stylesheets/main.css">
+    <script src="js/widget.js"></script>
 </head>
 
 <body>
@@ -71,11 +72,102 @@
 
     <!-- promo section -->
     <section class="promo">
-        <div class="carousel">
+        <div class="slider">
+            <div class="slide active">
+                <div class="bg">
+                    <img src="assets/images/products/blazer-low-77-jumbo.png" alt="">
+                    <a href="">Buy A Pair</a>
+                </div>
+                <div class="slide__text">
+                    <h1><span>the new</span>
+                        <span>Blazer</span>
+                        <span>sneaker</span>
+                        <span>collection</span></h1>
+                    <p>Introducing the new Blazer 77' collection. Pushing the limits of your next steps with comfort and durability. Our trendiest shoes, ever.</p>
+                </div>
+            </div>
+            <div class="slide">
+              <img src="2.jpg" alt="">
+              <div class="info">
+                <h2>Tropical Desert</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="3.jpg" alt="">
+              <div class="info">
+                <h2>Steaming Volcanoes</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="4.jpg" alt="">
+              <div class="info">
+                <h2>Mountain River</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="5.jpg" alt="">
+              <div class="info">
+                <h2>Egypt Pyramids</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="navigation">
+              <i class="fas fa-chevron-left prev-btn"></i>
+              <i class="fas fa-chevron-right next-btn"></i>
+            </div>
+            <div class="navigation-visibility">
+              <div class="slide-icon active"></div>
+              <div class="slide-icon"></div>
+              <div class="slide-icon"></div>
+              <div class="slide-icon"></div>
+              <div class="slide-icon"></div>
+            </div>
+          </div>
+        <!-- <div class="carousel">
             <div class="slides">
-                <img src="https://picsum.photos/1280/720?random=1" alt="slide image" class="slide">
-                <img src="https://picsum.photos/1280/720?random=2" alt="slide image" class="slide">
-                <img src="https://picsum.photos/1280/720?random=3" alt="slide image" class="slide">
+                <div class="slide">
+                    <div class="bg">
+                        <img src="assets/images/products/blazer-low-77-jumbo.png" alt="">
+                        <a href="">Buy A Pair</a>
+                    </div>
+                    <div class="slide__text">
+                        <h1><span>the new</span>
+                            <span>Blazer</span>
+                            <span>sneaker</span>
+                            <span>collection</span></h1>
+                        <p>Introducing the new Blazer 77' collection. Pushing the limits of your next steps with comfort and durability. Our trendiest shoes, ever.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="bg bg-2">
+                        <img src="assets/images/products/jordan-series-es.png" alt="">
+                        <a href="">Buy A Pair</a>
+                    </div>
+                    <div class="slide__text">
+                        <h1><span>the new</span>
+                            <span>jordan</span>
+                            <span>series</span>
+                            <span>collection</span></h1>
+                        <p>Introducing the new Blazer 77' collection. Pushing the limits of your next steps with comfort and durability. Our trendiest shoes, ever.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="bg">
+                        <img src="assets/images/products/adidas.png" alt="">
+                        <a href="">Buy A Pair</a>
+                    </div>
+                    <div class="slide__text">
+                        <h1><span>the new</span>
+                            <span>adidas</span>
+                            <span>nmd v3</span>
+                            <span>collection</span></h1>
+                        <p>Introducing the new Blazer 77' collection. Pushing the limits of your next steps with comfort and durability. Our trendiest shoes, ever.</p>
+                    </div>
+                </div>
+       
             </div>
 
             <div class="controls-2">
@@ -86,25 +178,45 @@
         </div>
         <div class="controls">
             <div class="control prev-slide"><span class="material-icons-outlined">
-                west
+                    west
                 </span></div>
             <div class="control next-slide"><span class="material-icons-outlined">
-                east
+                    east
                 </span>
-        </div>
+            </div> -->
     </section>
 
     <!-- categories -->
-    <section class="cat"></section>
+    <section class="cat">
+        <div class="cat__card">
+            <h2>Women</h2>
+            <p>Shop now <span class="material-icons-outlined">east</span></p>
+        </div>
+        <div class="cat__card">
+            <h2>Men</h2>
+            <p>Shop now <span class="material-icons-outlined">east</span></p>
+        </div>
+    </section>
 
     <!-- top kicks -->
-    <section class="top-products"></section>
+    <section class="top-products">
+        <h3>New releases</h3>
+        <div id="employeeList">
+
+        </div>
+    </section>
 
     <!-- new releases -->
-    <section class="new-releases"></section>
+    <section class="new-releases">
+        <h3>Top kicks</h3>
+    </section>
 
     <!-- mailing list -->
-    <section class="mailing-list"></section>
+    <section class="mailing-list">
+        <h2>Never miss a drop.</h2>
+        <p>Receive updates about new products and promotions</p>
+        <a href="#">join mailing list</a>
+    </section>
 
 
 

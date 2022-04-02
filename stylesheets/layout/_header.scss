@@ -36,7 +36,7 @@ header {
         position: fixed;
         display: grid;
         top: 77px;
-        right: -100%;
+        right: -100vw;
         transition: right 2s cubic-bezier(1, 0, 0, 1);
         overflow: hidden;
         padding-top:50px;

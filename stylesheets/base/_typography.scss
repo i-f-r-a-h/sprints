@@ -1,7 +1,41 @@
 /**
  * Basic typography style for copy text
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&family=Poppins:wght@400;500;600&display=swap');
+$primary-font:'Poppins', sans-serif ;
 body {
   color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+  font: normal 125% / 1.4 $primary-font-stack;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $secondary-font-stack;
+  font-weight: 800;
+}
+
+h1{
+  font-family: $secondary-font-stack;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -5%;
+}
+
+h2{
+  font-family: $secondary-font-stack;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+h3{
+  font-family: $secondary-font-stack;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+p{
+  line-height: 28px;
 }
