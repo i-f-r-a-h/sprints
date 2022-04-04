@@ -8,8 +8,9 @@ header {
     padding: 20px 50px;
     top: 0;
     width: 100%;
-    position: fixed;
+    position:relative;
     background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid black;
     z-index: 9999;
 
     //logo
@@ -35,7 +36,7 @@ header {
         background-color: white;
         position: fixed;
         display: grid;
-        top: 77px;
+        top: 70px;
         right: -100vw;
         transition: right 2s cubic-bezier(1, 0, 0, 1);
         overflow: hidden;
@@ -184,4 +185,21 @@ header {
 
 
 
+}
+
+.logo-js{
+    position: absolute;
+    margin-top: 7rem;
+    transform: scale(8);
+    transition: 2s;
+}
+.sticky{
+    margin-top: -1.8rem;
+    transform: scale(1.1);
+    transition: 2s;
+}
+
+
+.sticky-nav{
+    position: fixed;
 }

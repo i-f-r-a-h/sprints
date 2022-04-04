@@ -23,7 +23,15 @@ account.addEventListener('click', () => {
   displayAccount.classList.toggle('account-change');
 });
 
-
+//nav on scroll change
+window.addEventListener('scroll', function () {
+  let logo = document.querySelector('.logo-js');
+  logo.classList.toggle('sticky', window.scrollY > 5);
+  
+  let header = document.querySelector('header');
+  header.classList.toggle('sticky-nav', window.scrollY > 1);
+  // when the user scrolls past 400 the colour changes of the header.
+});
 
 
 //gallery
@@ -32,7 +40,7 @@ const slider = document.querySelector(".slider");
     const nextBtn = document.querySelector(".next-btn");
     const prevBtn = document.querySelector(".prev-btn");
     const slides = document.querySelectorAll(".slide");
-    const slideIcons = document.querySelectorAll(".slide-icon");
+    const slideIcons = document.querySelectorAll(".slide__image");
     const numberOfSlides = slides.length;
     var slideNumber = 0;
 

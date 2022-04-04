@@ -524,8 +524,9 @@ header {
   padding: 20px 50px;
   top: 0;
   width: 100%;
-  position: fixed;
+  position: relative;
   background-color: white;
+  border-bottom: 1px solid black;
   z-index: 9999;
 }
 
@@ -553,7 +554,7 @@ header .nav {
   position: fixed;
   display: -ms-grid;
   display: grid;
-  top: 77px;
+  top: 70px;
   right: -100vw;
   -webkit-transition: right 2s cubic-bezier(1, 0, 0, 1);
   transition: right 2s cubic-bezier(1, 0, 0, 1);
@@ -742,6 +743,27 @@ header .nav-icons .nav-icons-search::after {
   padding: 8px 20px;
 }
 
+.logo-js {
+  position: absolute;
+  margin-top: 7rem;
+  -webkit-transform: scale(8);
+          transform: scale(8);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.sticky {
+  margin-top: -1.8rem;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.sticky-nav {
+  position: fixed;
+}
+
 .footer {
   width: 100%;
   background-color: black;
@@ -859,13 +881,18 @@ header .nav-icons .nav-icons-search::after {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-clip-path: circle(0% at 0 50%);
-          clip-path: circle(0% at 0 50%);
+  -webkit-clip-path: circle(0% at 0 0%);
+          clip-path: circle(0% at 0 0%);
 }
 
 .slider .active {
-  -webkit-clip-path: circle(150% at 0 50%);
-          clip-path: circle(150% at 0 50%);
+  -webkit-clip-path: circle(150% at 0 0%);
+          clip-path: circle(150% at 0 0%);
+}
+
+.slider .active .slide__image {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   -webkit-transition: 2s;
   transition: 2s;
 }
@@ -1057,7 +1084,7 @@ header .nav-icons .nav-icons-search::after {
     position: relative;
     width: 100%;
     height: 700px;
-    margin-top: 70px;
+    margin-top: 150px;
     overflow: hidden;
   }
   .slide__text {
