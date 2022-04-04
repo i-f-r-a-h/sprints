@@ -25,7 +25,9 @@ account.addEventListener('click', () => {
 
 
 
+
 //gallery
+
 const slider = document.querySelector(".slider");
     const nextBtn = document.querySelector(".next-btn");
     const prevBtn = document.querySelector(".prev-btn");
@@ -34,7 +36,7 @@ const slider = document.querySelector(".slider");
     const numberOfSlides = slides.length;
     var slideNumber = 0;
 
-    //image slider next button
+    //image slider next button  
     nextBtn.addEventListener("click", () => {
       slides.forEach((slide) => {
         slide.classList.remove("active");
@@ -105,59 +107,3 @@ const slider = document.querySelector(".slider");
     slider.addEventListener("mouseout", () => {
       repeater();
     });
-/*
-let delay = 3000; //ms
-
-const slides = document.querySelector(".slides");
-const slidesCount = slides.childElementCount;
-const maxLeft = (slidesCount - 1) * 100 * -1;
-
-let current = 0;
-
-function changeSlide(next = true) {
-  if (next) {
-    current += current > maxLeft ? -100 : current * -1;
-  } else {
-    current = current < 0 ? current + 100 : maxLeft;
-  }
-
-  slides.style.left = current + "%";
-  //add animation here
-  // slides.style.opacity = "0.2";
-}
-
-let autoChange = setInterval(changeSlide, delay);
-const restart = function () {
-  clearInterval(autoChange);
-  autoChange = setInterval(changeSlide, delay);
-};
-
-
-const stop = () => { 
-  clearInterval(autoChange);
-}
-
-// Controls
-document.querySelector(".next-slide").addEventListener("click", function () {
-  changeSlide();
-  restart();
-});
-
-document.querySelector(".prev-slide").addEventListener("click", function () {
-  changeSlide(false);
-  restart();
-});
-
-document.querySelector(".play-btn").addEventListener("click", function () {
-  changeSlide();
-  restart();
-});
-
-document.querySelector(".stop-btn").addEventListener("click", function () {
-  stop();
-});
-
-document.querySelector(".timer-btn").addEventListener("click", function () {
-   delay = 1000; //ms
-}); 
-*/
