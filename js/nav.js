@@ -14,8 +14,6 @@ a.forEach(item => {
   });
 });
 
-
-
 //account
 const account = document.querySelector('.account-js');
 const displayAccount = document.querySelector('.account')
@@ -26,7 +24,7 @@ account.addEventListener('click', () => {
 //nav on scroll change
 window.addEventListener('scroll', function () {
   let logo = document.querySelector('.logo-js');
-  logo.classList.toggle('sticky', window.scrollY > 5);
+  logo.classList.toggle('sticky', window.scrollY > 2);
   
   let header = document.querySelector('header');
   header.classList.toggle('sticky-nav', window.scrollY > 1);
@@ -115,3 +113,34 @@ const slider = document.querySelector(".slider");
     slider.addEventListener("mouseout", () => {
       repeater();
     });
+
+
+
+    // slider
+    const productSlider = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+productSlider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  productSlider.classList.add('active');
+  startX = e.pageX - productSlider.offsetLeft;
+  scrollLeft = productSlider.scrollLeft;
+});
+productSlider.addEventListener('mouseleave', () => {
+  isDown = false;
+  productSlider.classList.remove('active');
+});
+productSlider.addEventListener('mouseup', () => {
+  isDown = false;
+  productSlider.classList.remove('active');
+});
+productSlider.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - productSlider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  productSlider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});

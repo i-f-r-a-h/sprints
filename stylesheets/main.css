@@ -891,8 +891,8 @@ header .nav-icons .nav-icons-search::after {
 }
 
 .slider .active .slide__image {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: 2s;
   transition: 2s;
 }
@@ -1063,9 +1063,9 @@ header .nav-icons .nav-icons-search::after {
   .slider {
     width: 100%;
   }
-  .slider .slide .info {
+  .slider .slide {
     position: relative;
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1079,12 +1079,13 @@ header .nav-icons .nav-icons-search::after {
   .slide {
     -ms-flex-line-pack: center;
         align-content: center;
+    border: 2px black solid;
   }
   .slider {
     position: relative;
-    width: 100%;
+    width: 95%;
     height: 700px;
-    margin-top: 150px;
+    margin: 12rem 2rem 1rem 2rem;
     overflow: hidden;
   }
   .slide__text {
@@ -1286,15 +1287,35 @@ button:hover {
   display: grid;
   -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  height: 500px;
+  height: 600px;
   width: 100%;
-  background-color: black;
   color: white;
+  background-color: black;
+  gap: 5rem;
+  padding: 2.5rem;
+}
+
+.cat__wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cat__image {
+  background-image: url("../assets/images/cats/mens.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.cat__image::nth-of-type(2) {
+  background-image: url("../assets/images/cats/womens.jpg");
 }
 
 .cat__card {
-  margin: 50px;
-  padding: 30px 50px;
+  padding: 70px;
   border: 1px solid white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1306,6 +1327,12 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .cat__card p {
@@ -1343,6 +1370,10 @@ button:hover {
   border: 2px solid black;
   padding: 20px 30px;
   margin-top: 20px;
+}
+
+.products {
+  margin: 0 40px;
 }
 
 .sign-up {
