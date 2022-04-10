@@ -171,3 +171,10 @@ $white: #efefef;
 .product__desc {
     color: black;
 }
+
+.product__stock{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: black;
+}

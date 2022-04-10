@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="stylesheets/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/widget.js"></script>
+  
 </head>
 
 <body>
@@ -58,7 +59,37 @@
             </span>
             <span class="material-icons-outlined material-icons--hide">help_outline</span>
             <span class="material-icons-outlined material-icons--hide account-js">person_outline</span>
-            <span class="material-icons">shopping_bag</span>
+
+            <div class="cart">
+                <button type="button" id="cart__btn">
+                    <span class="material-icons">shopping_bag</span>
+                    <span id="cart-count-info"></span>
+                </button>
+
+                <div class="cart__container">
+                    <div class="cart-list">
+                        <!-- single item -->
+                        <!-- <div class = "cart-item">
+                  <img src = "images/armchair.png" alt = "product image">
+                  <div class = "cart-item-info">
+                    <h3 class = "cart-item-name">Arm Chair</h3>
+                    <span class = "cart-item-category">Chair</span>
+                    <span class = "cart-item-price">$120.00</span>
+                  </div>
+xPXX
+                  <button type = "button" class = "cart-item-del-btn">
+                    <i class = "fas fa-times"></i>
+                  </button>
+                </div> -->
+                        <!-- end of single item  -->
+                    </div>
+
+                    <div class="cart-total">
+                        <h3>Total: $</h3>
+                        <span id="cart-total-value"></span>
+                    </div>
+                </div>
+            </div>
 
             <div class="account">
                 <p>Create an account or log in to view your orders, return or adjust your personal information</p>
@@ -170,18 +201,15 @@
     <!-- top kicks -->
     <section class="products top-products">
         <h3>New releases</h3>
-        <div class="grid-item ">
 
-             
-        </div>
     </section>
 
     <!-- new releases -->
     <section class="products new-releases">
         <h3>Top kicks</h3>
-               <div class="grid-item ">
+        <div class="grid-item">
 
-             
+
         </div>
     </section>
 
@@ -278,7 +306,8 @@
 
     <!-- js scripts -->
 
-    
+
+    <script src="js/cart.js"></script>
     <script src="js/nav.js"></script>
 
 

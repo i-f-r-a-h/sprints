@@ -1,43 +1,105 @@
-[
-  {
+[{
   "product_title": "blazer low '77 jumbo",
   "product_img": "blazer-low-77-jumbo.webp",
   "product_brand": "nike",
-  "product_price": 95.99
+  "product_price": 95.99,
+  "product_stock": {
+    "6": 8,
+    "7": 7,
+    "8": 0,
+    "9": 1,
+    "10": 33,
+    "11": 0
+  }
 }, {
   "product_title": "air flight lite mid",
   "product_img": "power-ranger-hurrikaze.webp",
   "product_brand": "nike",
-  "product_price": 105.50
-},{
+  "product_price": 105.50,
+  "product_stock": {
+    "6": 8,
+    "7": 7,
+    "100": 0,
+    "9": 1,
+    "10": 33,
+    "11": 0
+  }
+}, {
   "product_title": "574 lifestyle",
   "product_img": "574-lifestyle.webp",
   "product_brand": "new-balance",
-  "product_price": 75.00
-},{
+  "product_price": 75.00,
+  "product_stock": {
+    "6": 8,
+    "7": 7,
+    "8": 0,
+    "9": 1,
+    "10": 33,
+    "11": 0
+  }
+}, {
   "product_title": "jordan series es [gs]",
   "product_img": "jordan-series-es.png",
   "product_brand": "jordan",
-  "product_price": 125.50
-},{
+  "product_price": 125.50,
+  "product_stock": {
+    "6": 8,
+    "7": 7,
+    "8": 0,
+    "9": 1,
+    "10": 33,
+    "11": 0
+  }
+}, {
   "product_title": "chuck '70 recycled vintage ox",
   "product_img": "chuck.webp",
   "product_brand": "converse",
-  "product_price": 125.50
-},{
+  "product_price": 125.50,
+  "product_stock": {
+    "6": 8,
+    "7": 7,
+    "8": 0,
+    "9": 1,
+    "10": 33,
+    "11": 0
+  }
+}, {
   "product_title": "power ranger hurrikaze",
   "product_img": "power-ranger-hurrikaze.webp",
   "product_brand": "reebok",
-  "product_price": 65.00
-},{
+  "product_price": 65.00,
+  "product_stock": {
+    "6": 8,
+    "7": 7,
+    "8": 0,
+    "9": 1,
+    "10": 33,
+    "11": 0
+  }
+}, {
   "product_title": "power ranger hurrikaze",
   "product_img": "power-ranger-hurrikaze.webp",
   "product_brand": "reebok",
-  "product_price": 65.00
-},{
+  "product_price": 65.00,
+  "product_stock": {
+    "6": 8,
+    "7": 7,
+    "8": 0,
+    "9": 1,
+    "10": 33,
+    "11": 0
+  }
+}, {
   "product_title": "power ranger hurrikaze",
   "product_img": "power-ranger-hurrikaze.webp",
   "product_brand": "reebok",
-  "product_price": 65.00
-}
-]
+  "product_price": 65.00,
+  "product_stock": {
+    "6": 8,
+    "7": 7,
+    "8": 0,
+    "9": 1,
+    "10": 33,
+    "11": 0
+  }
+}]
