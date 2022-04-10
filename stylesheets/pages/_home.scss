@@ -28,7 +28,7 @@
         width: 100%;
         height: 100%;
 
-        &::nth-of-type(2){
+        &::nth-of-type(2) {
             background-image: url("../assets/images/cats/womens.jpg");
         }
     }
@@ -82,6 +82,92 @@
 
 //products
 
-.products{
+.products {
     margin: 0 40px;
+}
+
+
+
+$gray: #555;
+$yellow: #f2e968;
+$white: #efefef;
+
+
+
+
+
+@supports(display: grid) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        margin: 2rem 0;
+    }
+
+    .grid-item {
+        color: #fff;
+        font-size: 1em;
+        font-weight: 700;
+    }
+
+
+    .items {
+        position: relative;
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        transition: all 0.2s;
+        transform: scale(0.98);
+        will-change: transform;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .items::-webkit-scrollbar {
+        height: .8rem;
+        border-radius: 20px;
+    }
+
+    .items::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        width: 80%;
+    }
+
+    .items::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+        border-radius: 20px;
+    }
+
+    .active {
+        background: rgba(255, 255, 255, 0.3);
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        transform: scale(1);
+    }
+
+    .item {
+        display: inline-block;
+        border: 1px solid black;
+        min-height: 400px;
+        min-width: 400px;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+
+        img {
+            width: 100px;
+        }
+
+        @media screen and (max-width: 500px) {
+            min-height: 300px;
+            min-width: 300px;
+        }
+    }
+}
+
+.product__desc {
+    color: black;
 }
