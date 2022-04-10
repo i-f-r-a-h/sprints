@@ -8,7 +8,7 @@ $.ajax({
       productHTML +=
         `<div class="item">
                 <div class="product__image">
-                    <img src="assets/images/products/${result[product].product_img}" alt="" srcset="">
+                    <img class="product__img" src="assets/images/products/${result[product].product_img}" alt="" srcset="">
                     <button class="add-to-cart">Quick add</button> 
                 </div> 
                 <div class="product__desc">
