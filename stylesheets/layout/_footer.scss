@@ -8,6 +8,7 @@
 }
 
 $blue:#275EFE;
+
 .footer {
     width: 100%;
 
@@ -25,7 +26,7 @@ $blue:#275EFE;
     color: white;
 
     &__wrapper {
-        max-width: 1290px;
+        max-width: 1400px;
         margin-left: auto;
         margin-right: auto;
         padding-left: 20px;
@@ -56,7 +57,7 @@ $blue:#275EFE;
             display: flex;
             height: 60px;
             margin: 20px 0 50px -5px;
-            transition: border .25s ease-in-out, color .5s;
+
 
             input[type="text"] {
                 width: 80%;
@@ -78,8 +79,8 @@ $blue:#275EFE;
 
                 input[type="submit"],
                 input[type="text"] {
-                    color: rgb(10, 186, 202);
-                    border: 2px solid rgb(10, 186, 202);
+                    opacity: 0.5;
+                    transition: all .3s ease-in-out;
 
                 }
             }
@@ -148,9 +149,10 @@ $blue:#275EFE;
 
     &__copyright {
         text-align: center;
-        background-color: rgb(48, 48, 48);
+        background-color: rgb(27, 27, 27);
         padding: 25px;
         font-size: .8em;
+        color: #5f5f5f;
     }
 }
 
