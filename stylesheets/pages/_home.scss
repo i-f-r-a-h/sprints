@@ -133,7 +133,7 @@
     --offset: 1rem;
     --move-initial: calc(-25% + var(--offset));
     --move-final: calc(-50% + var(--offset));
-    transform: translate3d(var(--move-initial), 0, 0) rotate(-1deg);
+    transform: translate3d(var(--move-initial), 0, 0);
     animation: marquee 2s linear infinite;
     animation-play-state: paused;
     opacity: 0;
@@ -155,11 +155,11 @@
 
 @keyframes marquee {
     0% {
-        transform: translate3d(var(--move-initial), 0, 0) rotate(-1deg);
+        transform: translate3d(var(--move-initial), 0, 0) ;
     }
 
     100% {
-        transform: translate3d(var(--move-final), 0, 0) rotate(-1deg);
+        transform: translate3d(var(--move-final), 0, 0) ;
     }
 }
 

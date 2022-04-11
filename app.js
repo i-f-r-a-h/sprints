@@ -32,7 +32,7 @@ function eventListeners() {
 function updateCartInfo() {
     let cartInfo = findCartInfo();
     cartCountInfo.textContent = cartInfo.productCount;
-    cartTotalValue.textContent = cartInfo.total;
+    cartTotalValue.textContent = `£${cartInfo.total}`;
 }
 
 // load product items content form JSON file
@@ -43,7 +43,7 @@ function loadJSON() {
             let html = '';
             data.forEach(product => {
                 html += `
-                <div class = "item">
+                <div class = "item" id="buyItems">
                     <div class = "product-img">
                         <img src = "${product.imgSrc}" alt = "product image">
                         <button type = "button" class = "add-to-cart-btn">
@@ -96,15 +96,17 @@ function addToCartList(product) {
     cartItem.classList.add('cart-item');
     cartItem.setAttribute('data-id', `${product.id}`);
     cartItem.innerHTML = `
-        <img src = "${product.imgSrc}" alt = "product image">
+   <img src = "${product.imgSrc}" alt = "product image">
         <div class = "cart-item-info">
-            <h3 class = "cart-item-name">${product.name}</h3>
-            <span class = "cart-item-category">${product.category}</span>
-            <span class = "cart-item-price">${product.price}</span>
+            <p class ="cart-item-name">${product.name}</p>
+            <span class ="cart-item-category">Size:<b>${product.category}</b></span>
+            <span class ="cart-item-price">${product.price}</span>
         </div>
 
-        <button type = "button" class = "cart-item-del-btn">
-            <i class = "fas fa-times"></i>
+        <span class="cart-edit-link">edit order</span>
+
+       <button type = "button" class="cart-item-del-btn">
+            <i class="fa-solid fa-trash-can"></i>
         </button>
     `;
     cartList.appendChild(cartItem);

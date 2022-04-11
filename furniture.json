@@ -1,62 +1,62 @@
 [
     {
         "name" : "Armchair",
-        "category" : "Chair",
+        "category" : "7",
         "price" : "50.25",
         "imgSrc" : "images/armchair.png"
     },
     {
         "name" : "Bed",
         "category" : "Bed",
-        "price" : "102.00",
+        "price" : "11",
         "imgSrc" : "images/bed.png"
     },
     {
         "name" : "Bench",
         "category" : "Bench",
-        "price" : "15.00",
+        "price" : "18",
         "imgSrc" : "images/bench.png"
     },
     {
         "name" : "Bunk bed",
         "category" : "Bed",
-        "price" : "23.75",
+        "price" : "6",
         "imgSrc" : "images/bunk-bed.png"
     },
     {
         "name" : "Cabinet",
         "category" : "Cabinet",
-        "price" : "50.00",
+        "price" : "5.5",
         "imgSrc" : "images/cabinet.png"
     },
     {
         "name" : "Card table",
         "category" : "Table",
-        "price" : "200.50",
+        "price" : "8",
         "imgSrc" : "images/card-table.png"
     },
     {
         "name" : "Cushion",
         "category" : "Cushion",
-        "price" : "5.50",
+        "price" : "11",
         "imgSrc" : "images/cushion.png"
     },
     {
         "name" : "Desk",
         "category" : "Desk",
-        "price" : "25.00",
+        "price" : "10",
         "imgSrc" : "images/desk.png"
     },
     {
         "name" : "Drawer",
         "category" : "Drawer",
-        "price" : "49.00",
+        "price" : "8",
         "imgSrc" : "images/drawer.png"
     },
     {
         "name" : "Office chair",
         "category" : "Chair",
-        "price" : "60.99",
+        "price" : "9",
         "imgSrc" : "images/office-chair.png"
     },
     {
