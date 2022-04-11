@@ -1569,7 +1569,7 @@ button:hover {
   gap: 10px;
   text-align: center;
   width: 100%;
-  margin: 200px auto;
+  margin: 80px auto 150px auto;
   padding: 0 50px;
   max-width: 400px;
 }
@@ -1582,6 +1582,114 @@ button:hover {
   border: 2px solid black;
   padding: 20px 30px;
   margin-top: 20px;
+  border-radius: 20px;
+  -webkit-transition: background-color .1s ease-in-out, -webkit-box-shadow .3s ease-in-out;
+  transition: background-color .1s ease-in-out, -webkit-box-shadow .3s ease-in-out;
+  transition: background-color .1s ease-in-out, box-shadow .3s ease-in-out;
+  transition: background-color .1s ease-in-out, box-shadow .3s ease-in-out, -webkit-box-shadow .3s ease-in-out;
+}
+
+.mailing-list a:hover {
+  background-color: #275EFE;
+  color: white;
+  -webkit-box-shadow: 5px 5px 0px 2px rgba(0, 0, 0, 0.9);
+          box-shadow: 5px 5px 0px 2px rgba(0, 0, 0, 0.9);
+}
+
+.button {
+  pointer-events: auto;
+  cursor: pointer;
+  background: #e7e7e7;
+  border: none;
+  padding: 1.5rem 3rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+}
+
+.button::before,
+.button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button--atlas > span {
+  display: inline-block;
+}
+
+.button--atlas:hover > span {
+  opacity: 0;
+}
+
+.marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.marquee__inner {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  --offset: 1rem;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+  -webkit-transform: translate3d(var(--move-initial), 0, 0) rotate(-1deg);
+          transform: translate3d(var(--move-initial), 0, 0) rotate(-1deg);
+  -webkit-animation: marquee 2s linear infinite;
+          animation: marquee 2s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  opacity: 0;
+}
+
+.button--atlas:hover .marquee__inner {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  opacity: 1;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.marquee span {
+  text-align: center;
+  white-space: nowrap;
+  font-style: italic;
+  padding: 1.5rem 0.5rem;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translate3d(var(--move-initial), 0, 0) rotate(-1deg);
+            transform: translate3d(var(--move-initial), 0, 0) rotate(-1deg);
+  }
+  100% {
+    -webkit-transform: translate3d(var(--move-final), 0, 0) rotate(-1deg);
+            transform: translate3d(var(--move-final), 0, 0) rotate(-1deg);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -webkit-transform: translate3d(var(--move-initial), 0, 0) rotate(-1deg);
+            transform: translate3d(var(--move-initial), 0, 0) rotate(-1deg);
+  }
+  100% {
+    -webkit-transform: translate3d(var(--move-final), 0, 0) rotate(-1deg);
+            transform: translate3d(var(--move-final), 0, 0) rotate(-1deg);
+  }
 }
 
 .products {
