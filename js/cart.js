@@ -4,8 +4,15 @@
 
 
 
-   //load page down a bit
-   //    $(document).ready(function () {
-   //        // Handler for .ready() called.
-   //        $('html').scrollTop(100);
-   //    });
+   // check if cart is empty
+   $(document).on("click", function () {
+       if (!$.isEmptyObject($.find('.cart-item'))) {
+           $('.cart-alert').hide();
+
+       } else {
+           $('.cart-alert').css({
+               "text-align": "center",
+               "padding": "100px 0"
+           }).show();
+       }
+   });

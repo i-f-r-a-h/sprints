@@ -8,7 +8,7 @@ header {
     padding: 20px 50px;
     top: 0;
     width: 100%;
-    position:relative;
+    position: relative;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid black;
     z-index: 9999;
@@ -40,8 +40,8 @@ header {
         right: -100vw;
         transition: right 2s cubic-bezier(1, 0, 0, 1);
         overflow: hidden;
-        padding-top:50px;
-        z-index: 2;
+        padding-top: 50px;
+        z-index: 5;
 
 
         &__list {
@@ -69,7 +69,8 @@ header {
             top: 0;
             position: relative;
             overflow: visible;
-            padding-top:0px;
+            padding-top: 0px;
+
             .nav__list-item--hide {
                 display: none;
             }
@@ -150,6 +151,7 @@ header {
 
 // account
 .account {
+    display: none;
     position: absolute;
     background-color: white;
     padding: 0px 50px 50px 50px;
@@ -187,19 +189,22 @@ header {
 
 }
 
-.logo-js{
-    position: absolute;
-    margin-top: 7rem;
-    transform: scale(8);
-    transition: 2s;
+.logo-js {
+    @media (min-width:1000px) {
+        position: absolute;
+        margin-top: 7rem;
+        transform: scale(8);
+        transition: 2s;
+    }
 }
-.sticky{
+
+.sticky {
     margin-top: -1.8rem;
     transform: scale(1.1);
     transition: 2s;
 }
 
 
-.sticky-nav{
+.sticky-nav {
     position: fixed;
 }

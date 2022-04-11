@@ -140,6 +140,7 @@ function loadCart() {
 
     // calculate and update UI of cart info 
     updateCartInfo();
+
 }
 
 // calculate total price of the cart and other info
