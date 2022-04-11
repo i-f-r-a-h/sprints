@@ -1562,11 +1562,17 @@ header .nav-icons .material-icons-outlined--hide {
   position: relative;
 }
 
-.banner img,
-.banner source {
+.banner img {
   max-width: 100%;
   height: auto;
   border: 1px solid black;
+}
+
+.banner picture {
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
 }
 
 .banner a {
@@ -1596,6 +1602,23 @@ header .nav-icons .material-icons-outlined--hide {
   color: white;
   -webkit-box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.9);
           box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1200px) {
+  .banner img {
+    max-width: 1300px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .banner a {
+    font-size: 1.8rem;
+  }
+  .banner source {
+    border: none;
+  }
 }
 
 .form__container {
