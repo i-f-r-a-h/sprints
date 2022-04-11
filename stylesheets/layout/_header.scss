@@ -2,22 +2,17 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: end;
-    padding: 20px 50px;
-    top: 0;
-    width: 100%;
-    position: relative;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid black;
+    top: 0;
+    width: 100%;
     z-index: 9999;
 
     //logo
     .logo {
         width: 120px;
         justify-self: center;
-        z-index: 9;
+        z-index: 2;
     }
 
     //hamburger menu
@@ -36,13 +31,12 @@ header {
         background-color: white;
         position: fixed;
         display: grid;
-        top: 70px;
+        top: 75px;
         right: -100vw;
         transition: right 2s cubic-bezier(1, 0, 0, 1);
         overflow: hidden;
         padding-top: 50px;
         z-index: 5;
-
 
         &__list {
             display: flex;
@@ -56,6 +50,14 @@ header {
             letter-spacing: 2px;
             padding: 0;
             margin: 0;
+            transition: .3s ease-in-out;
+
+            a {
+                &:hover {
+                    color: #275EFE;
+                    opacity: .8;
+                }
+            }
 
             @media (min-width:1000px) {
                 flex-direction: row;
@@ -90,6 +92,11 @@ header {
         .material-icons-outlined {
             margin-left: 10px;
             z-index: 4;
+            transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            &:hover {
+                transform: scale(1.1);
+            }
 
             &--hide {
                 display: none;
@@ -100,42 +107,7 @@ header {
             }
         }
 
-        //search
-        .nav-icons-search {
 
-            position: relative;
-            z-index: 4;
-
-            &-input {
-                display: none;
-
-                @media (min-width:900px) {
-                    display: inline-block;
-                    border-radius: 20px;
-                    padding-left: 50px;
-                }
-
-                &::placeholder {
-                    padding-left: 40px;
-                }
-            }
-
-            &::after {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                font-family: 'Material Icons';
-                content: "search";
-                font-size: 1.5rem;
-
-                @media (min-width:900px) {
-                    display: inline-block;
-                    position: absolute;
-                    left: 0;
-                    padding-left: 10px;
-                }
-            }
-        }
     }
 }
 
@@ -146,25 +118,33 @@ header {
 
 
 .account-change {
+    display: block !important;
     opacity: 1 !important;
 }
 
 // account
 .account {
-    display: none;
     position: absolute;
-    background-color: white;
-    padding: 0px 50px 50px 50px;
-    margin: 270px -10px 0 0;
-    z-index: -3;
+    background: #fff;
+    top: 60px;
+    box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.21);
+    display: none;
+    padding: 20px;
+    border: 1px solid black;
     width: 500px;
+
+
+    padding: 0px 50px 50px 50px;
+
+    z-index: -3;
+
     opacity: 0;
     transition: 0.3s ease-in-out;
 
     p {
-        margin-top: 100px;
-        font-size: 14px;
-        width: 60%;
+        margin-top: 50px;
+        font-size: 16px;
+        width: 80%;
     }
 
     &__links {
@@ -174,6 +154,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        text-decoration: underline;
 
         &-login {
             background-color: $brand-color;
@@ -199,7 +180,7 @@ header {
 }
 
 .sticky {
-    margin-top: -1.8rem;
+    margin-top: -1.5rem;
     transform: scale(1.1);
     transition: 2s;
 }
@@ -207,4 +188,16 @@ header {
 
 .sticky-nav {
     position: fixed;
+}
+
+
+.dsk-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+    padding: 20px;
+    width: 100%;
+    position: relative;
 }
