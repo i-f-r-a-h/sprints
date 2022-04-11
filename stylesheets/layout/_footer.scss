@@ -1,6 +1,13 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+:root {
+    --text: #2B3044;
+    --line: #BBC1E1;
+    --line-active: #275EFE;
+}
+
+
 .footer {
     width: 100%;
 
@@ -17,8 +24,8 @@
     background-color: black;
     color: white;
 
-    &__wrapper{
-        max-width: 1980px;
+    &__wrapper {
+        max-width: 1290px;
         margin-left: auto;
         margin-right: auto;
         padding-left: 20px;
@@ -49,16 +56,32 @@
             display: flex;
             height: 60px;
             margin: 20px 0 50px -5px;
+            transition: border .25s ease-in-out, color .5s;
 
             input[type="text"] {
                 width: 80%;
                 padding-left: 20px;
                 border-radius: 20px 0 0 20px;
+                background-color: black;
+                border: 1px solid white;
             }
 
             input[type="submit"] {
+                border: 1px solid white;
+                background-color: black;
+                color: white;
                 width: 20%;
                 border-radius: 0 20px 20px 0;
+            }
+
+            &:hover {
+
+                input[type="submit"],
+                input[type="text"] {
+                    color: rgb(10, 186, 202);
+                    border: 2px solid rgb(10, 186, 202);
+
+                }
             }
         }
 
@@ -71,7 +94,31 @@
         a {
             color: white;
             text-transform: uppercase;
+
+            svg {
+                width: 76px;
+                height: 40px;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translate(-50%, 7px) translateZ(0);
+                fill: none;
+                stroke: var(--stroke, var(--line));
+                stroke-linecap: round;
+                stroke-width: 2px;
+                stroke-dasharray: var(--offset, 69px) 278px;
+                stroke-dashoffset: 361px;
+                transition: stroke .25s ease var(--stroke-delay, 0s), stroke-dasharray .35s;
+            }
+
+            &:hover {
+                --spacing: 4px;
+                --stroke: var(--line-active);
+                --stroke-delay: .1s;
+                --offset: 180px;
+            }
         }
+
     }
 
 
@@ -91,6 +138,56 @@
             .fa-brands {
                 color: white;
             }
+
+            &:hover {
+                opacity: .4;
+                transition: all .4s ease-in-out;
+            }
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        background-color: rgb(48, 48, 48);
+        padding: 25px;
+        font-size: .8em;
+    }
+}
+
+
+:root {
+    --text: #2B3044;
+    --line: #BBC1E1;
+    --line-active: #275EFE;
+    --stroke-width: 1px;
+}
+
+.footer__links__item {
+    a {
+        position: relative;
+        margin: 0 var(--spacing, 0px);
+        transition: margin .25s;
+
+        svg {
+
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            fill: none;
+            stroke: var(--stroke, var(--line));
+            stroke-linecap: round;
+            stroke-width: var(--stroke-width);
+            stroke-dashoffset: 361px;
+            transition: stroke .25s ease var(--stroke-delay, 0s), stroke-dasharray .35s;
+        }
+
+        &:hover {
+            --stroke-width: 3px;
+            --spacing: 4px;
+            --stroke: var(--line-active);
+            --stroke-delay: .1s;
+            --offset: 180px;
         }
     }
 }

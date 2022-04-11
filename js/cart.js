@@ -18,6 +18,7 @@ $(document).ready(function () {
 
 
 
+
     // purchase product
     function purchaseProduct(e) {
         if (e.target.classList.contains('add-to-cart')) {
@@ -64,7 +65,7 @@ $(document).ready(function () {
         <img src = "${product.imgSrc}" alt = "product image">
         <div class = "cart-item-info">
             <h3 class = "cart-item-name">${product.name}</h3>
-            <span class = "cart-item-category">${product.category}</span>
+             <span class = "cart-item-category">${product.size}</span>
             <span class = "cart-item-price">${product.price}</span>
         </div>
 

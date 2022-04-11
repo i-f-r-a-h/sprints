@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     submit.addEventListener('click', (e) => {
         //email
-        if (email.value.match(validation)) {
+        if (!email.value.match(validation)) {
             displayError('email', 'Invalid:include @ symbol in your email');
         } else if (email.value == '') {
             displayError('email', 'blank: please enter an email');
@@ -63,9 +63,11 @@ window.addEventListener("DOMContentLoaded", function () {
         var m = today.getMonth() - birthDate.getMonth();
         if (m < 0 || m === 0 && today.getDate() < birthDate.getDate()) {
             userAge--;
-            if (userAge < 18) {
+            if (userAge < 2) {
+                displayError('age', 'you are still a baby!');
+            } else if (userAge < 18) {
                 let ageLeft = 18 - userAge;
-                displayError('age', 'Sorry, ' + ageLeft + ' years left before you can join!');
+                displayError('age', 'Sorry, ' + ageLeft + ' years left before you can join! (Must be 18+ to join)');
             } else {
                 success('age');
             }

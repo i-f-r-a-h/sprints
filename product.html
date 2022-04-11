@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRINT Footwear</title>
+    <title>SPRINT | Home</title>
     <!-- icon kit -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/7be4e2fa54.js" crossorigin="anonymous"></script>
-    <!-- stylesheets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="stylesheets/main.css">
 </head>
 
 <body>
-    <!-- header -->
-    <header class="container">
+
+    <!-- header  -->
+    <header>
+
+        <!-- navbar -->
         <!-- mobile navigation -->
         <div class="hamburger-menu">
             <span class="material-icons menu__trigger js-trigger">menu</span>
@@ -23,9 +32,6 @@
         <!-- navigation -->
         <nav class="nav nav--primary ">
             <ul class="nav__list nav-items-primary">
-                <li class="nav__list-item nav__list-item--active">
-                    <a href="index.html">Home</a>
-                </li>
                 <li class="nav__list-item">
                     <a href="shop.html">Women</a>
                 </li>
@@ -42,68 +48,177 @@
                     <a href="shop.html">Sale</a>
                 </li>
                 <li class="nav__list-item nav__list-item--hide">
-                    <a href="shop.html">Account</a>
+                    <a href="login.html">Account</a>
                 </li>
             </ul>
         </nav>
         <!-- logo -->
         <div class="logo">
-            <a href="index.html"><img class="logo" src="assets/logo/logo.svg" alt="sprints logo"></a>
+            <a class="logo-js" href="index.html"><img class="logo" src="assets/logo/logo.svg" alt="sprints logo"></a>
         </div>
-
-        <!-- icons -->
         <div class="nav-icons">
-            <span class="material-icons">search</span>
-            <span class="material-icons material-icons--hide">person</span>
-            <span class="material-icons material-icons--hide">favorite_border</span>
-            <span class="material-icons">shopping_bag</span>
-        </div>
+            <span class="nav-icons-search">
+                <input type="text" name="search" id="nav-search" class="nav-icons-search-input" placeholder="search...">
+            </span>
+            <span class="material-icons-outlined material-icons--hide">help_outline</span>
+            <span class="material-icons-outlined material-icons--hide account-js">person_outline</span>
+            <div class="cart">
+                <div class="cart">
+                    <button type="button" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count-info"></span>
+                    </button>
+
+                    <div class="cart-container">
+                        <div class="cart-list">
+                            <!-- single item -->
+                            <!-- <div class = "cart-item">
+                  <img src = "images/armchair.png" alt = "product image">
+                  <div class = "cart-item-info">
+                    <h3 class = "cart-item-name">Arm Chair</h3>
+                    <span class = "cart-item-category">Chair</span>
+                    <span class = "cart-item-price">$120.00</span>
+                  </div>
+
+                  <button type = "button" class = "cart-item-del-btn">
+                    <i class = "fas fa-times"></i>
+                  </button>
+                </div> -->
+                            <!-- end of single item  -->
+                        </div>
+
+                        <div class="cart-total">
+                            <h3>Total: $</h3>
+                            <span id="cart-total-value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="account">
+                    <p>Create an account or log in to view your orders, return or adjust your personal information
+                    </p>
+                    <div class="account__links">
+                        <a href="sign-up.html" class="account__links-create">Create account</a>
+                        <a href="login.html" class="account__links-login">Login</a>
+                    </div>
+                </div>
+            </div>
+            </nav>
+            <!-- end of navbar -->
+
     </header>
+    <!-- end of header -->
+    <!-- promo section -->
+    <section class="promo">
+        <div class="slider">
+            <div class="slide active">
+                <div class="slide__text">
+                    <h1><span>the new</span>
+                        <span>Blazer</span>
+                        <span>sneaker</span>
+                        <span>collection</span></h1>
+                    <p>Pushing the limits of your next steps with comfort and
+                        durability.Pushing the limits of your next steps with comfort and
+                        durability.</p>
+                    <a href="">shop the collection</a>
+                </div>
+                <div class="slide__image">
+                    <img src="assets/images/products/blazer-low-77-jumbo.png" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__text">
+                    <h1><span>the new</span>
+                        <span>adidas</span>
+                        <span>sneaker</span>
+                        <span>collection</span></h1>
+                    <p>Pushing the limits of your next steps with comfort and
+                        durability.Pushing the limits of your next steps with comfort and
+                        durability.</p>
+                    <a href="">shop the collection</a>
+                </div>
+                <div class="slide__image">
+                    <img src="assets/images/products/adidas.png" alt="">
+                </div>
+
+            </div>
+            <div class="slide">
+                <div class="slide__text">
+                    <h1><span>the new</span>
+                        <span>jordan</span>
+                        <span>sneaker</span>
+                        <span>collection</span></h1>
+                    <p>Pushing the limits of your next steps with comfort and
+                        durability.Pushing the limits of your next steps with comfort and
+                        durability.</p>
+                    <a href="">shop the collection</a>
+                </div>
+                <div class="slide__image">
+                    <img src="assets/images/products/jordan-series-es.png" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__text">
+                    <h1><span>the new</span>
+                        <span>Balance</span>
+                        <span>sneaker</span>
+                        <span>collection</span></h1>
+                    <p>Pushing the limits of your next steps with comfort and
+                        durability.Pushing the limits of your next steps with comfort and
+                        durability.</p>
+                    <a href="">shop the collection</a>
+                </div>
+                <div class="slide__image">
+                    <img src="assets/images/products/new-balance.png" alt="">
+                </div>
+            </div>
+            <div class="navigation">
+                <i class="fas fa-chevron-left prev-btn"></i>
+                <i class="fas fa-chevron-right next-btn"></i>
+            </div>
+            <div class="navigation-visibility">
+                <div class="slide-icon active"></div>
+                <div class="slide-icon"></div>
+                <div class="slide-icon"></div>
+                <div class="slide-icon"></div>
+            </div>
+        </div>
+
+    </section>
+    <!-- products section  -->
+    <section class="products new-releases">
+        <h3>Top kicks</h3>
+        <div class="grid-item">
+            <div class="items">
+                <!-- single item -->
+                <!-- <div class = "product-item">
+            <div class = "product-img">
+              <img src = "images/bed.png" alt = "product image">
+              <button type = "button" class = "add-to-cart-btn">
+                <i class = "fas fa-shopping-cart"></i>Add To Cart
+              </button>
+            </div>
+
+            <div class = "product-content">
+              <h3 class = "product-name">Wooden Bed</h3>
+              <span class = "product-category">Bed</span>
+              <p class = "product-price">$120.00</p>
+            </div>
+          </div> -->
+                <!-- end of single item -->
+            </div>
 
 
-    <main class="sign-up">
-        <section class="form__container">
-            <h2>Create an account</h2>
-            <form class="form form__signIn">
-                <!-- email -->
-                <label for="email">Email address
-                    <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your email...">
-                    <div class="error error--email"></div>
-                </label>
-                <!-- password -->
-                <label for="pwd">Password
-                    <input type="password" name="pwd" id="pwd" placeholder="Enter your password...">
-                    <div class="error error--pwd"></div>
-                </label>
-                <!-- confirm password -->
-                <label for="confirm-pwd">Confirm Password
-                    <input type="password" name="confirm-pwd" id="confirmPwd" placeholder="Repeat your password...">
-                    <div class="error error--confirmPwd"></div>
-                </label>
-                <!-- age -->
-                <label for="age">Enter your birthday
-                    <input type="date" name="bday" id="age" >
-                    <div class="error error--age"></div>
-
-                </label>
-
-
-                <!-- terms and condition -->
-
-                <label for="check"><input type="checkbox" name="check" id="check">I agree to the terms and conditions
-                    <div class="error error--check"></div>
-                </label>
-                <!-- submit button -->
-                <input type="button" value="submit">
-            </form>
-            <p>Already have an account? <a href="login.html">Log in here</a></p>
-        </section>
-
-    </main>
-
-
+        </div>
+    </section>
+    <!-- end of products section -->
+    <!-- mailing list -->
+    <section class="mailing-list">
+        <h2>Never miss a drop.</h2>
+        <p>Receive updates about new products and promotions</p>
+        <a href="#">join mailing list</a>
+    </section>
     <!-- footer -->
-    <footer class="footer container">
+    <footer class="footer">
         <div class="footer__wrapper">
             <section class="footer__container">
                 <div class="footer__newsletter">
@@ -111,45 +226,73 @@
                     <p class="footer__newsletter__info">Enter your phone number so we can text you about secret stuff
                         when you sign up for texts</p>
                     <form class="footer__newsletter__form" action="#">
-                        <input type="number" name="" id="">
-                        <input type="submit" value="">
+                        <input type="text" name="" id="" placeholder="Enter phone number" autocomplete="tel" required>
+                        <input type="submit" value="join">
                     </form>
                 </div>
                 <div class="footer__links">
                     <ul class="footer__links__items">
                         <li class="footer__links__item">
                             <a href="" target="_blank">
-                                Home
+                                  Help center
+                                <svg viewBox="0 0 70 36">
+                                    <path
+                                        d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527" />
+                                </svg>
                             </a>
                         </li>
                         <li class="footer__links__item">
                             <a href="" target="_blank">
-                                Home
+                                terms of use
+                                 <svg viewBox="0 0 70 36">
+                                    <path
+                                        d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527" />
+                                </svg>
                             </a>
                         </li>
                         <li class="footer__links__item">
                             <a href="" target="_blank">
-                                Home
+                                track your order
+                                 <svg viewBox="0 0 70 36">
+                                    <path
+                                        d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527" />
+                                </svg>
                             </a>
                         </li>
                         <li class="footer__links__item">
                             <a href="" target="_blank">
-                                Home
+                                returns and exchanges
+                                 <svg viewBox="0 0 70 36">
+                                    <path
+                                        d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527" />
+                                </svg>
                             </a>
                         </li>
                         <li class="footer__links__item">
                             <a href="" target="_blank">
-                                Home
+                                account
+                                 <svg viewBox="0 0 70 36">
+                                    <path
+                                        d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527" />
+                                </svg>
                             </a>
                         </li>
                         <li class="footer__links__item">
                             <a href="" target="_blank">
-                                Home
+                                about
+                                 <svg viewBox="0 0 70 36">
+                                    <path
+                                        d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527" />
+                                </svg>
                             </a>
                         </li>
                         <li class="footer__links__item">
                             <a href="" target="_blank">
-                                Home
+                                contact us
+                                 <svg viewBox="0 0 70 36">
+                                    <path
+                                        d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527" />
+                                </svg>
                             </a>
                         </li>
                     </ul>
@@ -178,14 +321,22 @@
                     </li>
                 </div>
             </section>
-            <div class="footer__bottom">
-                <p class="footer__copyright">© SPRINTS 2022. All Rights Reserved</p>
-            </div>
         </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">© SPRINTS 2022. All Rights Reserved</p>
+        </div>
+
     </footer>
 
-    <!-- js scripts -->
-    <script src="js/form.js"></script>
+
+
+
+
+
+
+    <script src="app.js"></script>
+    <script src="js/nav.js"></script>
+
 </body>
 
 </html>

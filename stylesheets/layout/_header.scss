@@ -47,7 +47,7 @@ header {
         &__list {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: center !important;
             list-style-type: none;
             gap: 1rem;
             font-size: 30px;

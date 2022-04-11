@@ -16,20 +16,8 @@ $.ajax({
                             <p class="product__price">£${result[product].product_price}</p>
                 </div>
             </div>`;
+      $(".grid-item").html(productHTML);
+
     }
-    productHTML += '</div>';
-    $(".grid-item").html(productHTML);
-
-
-    // add to cart
-    // $('.add-to-cart').click(function (e) {
-    //   if (e.target) {
-    //     for (let i in result) {
-    //       if (result.hasOwnProperty(i)) {
-    //         console.log(` <li> The first name is:${Object.keys(result[i].product_stock)}`);
-    //       }
-    //     }
-    //   }
-    // });
   }
 });
