@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://sprints.netlify.app/"><img width="1438" alt="Screenshot 2022-04-12 at 18 00 10"
+  <a align="center" href="https://sprints.netlify.app/"><img width="1438" alt="Screenshot 2022-04-12 at 18 00 10"
       src="https://user-images.githubusercontent.com/90143819/163016370-de6902a7-bdf0-426e-8ac1-68a3d17b33e3.svg"
       width="200">
   </a>
@@ -20,15 +20,19 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://user-images.githubusercontent.com/90143819/163017367-f8e15436-4b20-4bb9-b4fc-ebe2d069a570.gif)
+  <a align="center" href="https://sprints.netlify.app/"><img width="1438" alt="Screenshot 2022-04-12 at 18 00 10"
+      src="https://user-images.githubusercontent.com/90143819/163017367-f8e15436-4b20-4bb9-b4fc-ebe2d069a570.gif"
+      width="200">
+  </a>
+
 
 ## Key Features
 
 * Page Loader
 * Form Validation
-- dynamically checks users input when filling out the sign up or log in form
+  - dynamically checks users input when filling out the sign up or log in form
 * Shopping cart
-- ability to add and remove products from the cart as well as displaying total price
+  - ability to add and remove products from the cart as well as displaying total price
 * Image gallery
 * Use of JSON/AJAX 
 * Responsive & SVG techniques
