@@ -21,7 +21,7 @@
 </p>
 
   <a align="center" href="https://sprints.netlify.app/"><img width="1438" alt="Screenshot 2022-04-12 at 18 00 10"
-      src="https://user-images.githubusercontent.com/90143819/163017367-f8e15436-4b20-4bb9-b4fc-ebe2d069a570.gif"
+      src="https://user-images.githubusercontent.com/90143819/163017367-f8e15436-4b20-4bb9-b4fc-ebe2d069a570.gifgit"
       width="200">
   </a>
 

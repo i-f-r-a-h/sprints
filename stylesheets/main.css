@@ -892,13 +892,19 @@ header .nav-icons .material-icons-outlined--hide {
   width: 90vw;
   height: 80vh;
   top: 60px;
-  right: -20%;
+  right: 0%;
   -webkit-box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.21);
           box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.21);
   display: none;
   padding: 20px;
   border: 1px solid black;
   max-width: 500px;
+}
+
+@media (min-width: 1000px) {
+  .cart-container {
+    right: -20%;
+  }
 }
 
 .cart-container::-webkit-scrollbar {

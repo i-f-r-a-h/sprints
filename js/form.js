@@ -41,13 +41,18 @@ window.addEventListener("DOMContentLoaded", function () {
     //3.function:display success
     function success(target) {
         document.querySelector(`.error--${target}`).style.display = 'none';
-        document.querySelector(`#${target}`).className += " success";
+        if (!$(`#${target}`).hasClass('.success')) {
+            $(`#${target}`).addClass('success');
+        } else if (hasClass) {
+            $(`#${target}`).removeClass('success');
+        }
     }
 
 
 
 
     submit.addEventListener('click', (e) => {
+        $("div").removeClass("success");
         //4.email validation
         if (email.value == '') {
             displayError('email', 'blank: please enter an email');
@@ -105,7 +110,12 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
         //9.success animation
-        if ($('.success').length > 0) {
+
+
+
+
+        if ($('.success').length == 5) {
+
             $(submit).addClass('send');
             $(submit).one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
                 function (e) {
