@@ -1,122 +1,72 @@
-[
-    {
-        "name" : "Armchair",
-        "category" : "7",
-        "price" : "50.25",
-        "imgSrc" : "images/armchair.png"
+[{
+        "name": "air flight lite mid",
+        "category": "7",
+        "price": "50.25",
+        "imgSrc": "assets/images/products/power-ranger-hurrikaze.webp",
+        "imgSrc2": "assets/images/products/power-ranger-hurrikaze-2.webp"
     },
     {
-        "name" : "Bed",
-        "category" : "Bed",
-        "price" : "11",
-        "imgSrc" : "images/bed.png"
+        "name": "574 lifestyle",
+        "category": "10",
+        "price": "75.00",
+        "imgSrc": "assets/images/products/574-lifestyle.webp",
+        "imgSrc2": "assets/images/products/574-lifestyle-2.webp"
     },
     {
-        "name" : "Bench",
-        "category" : "Bench",
-        "price" : "18",
-        "imgSrc" : "images/bench.png"
+        "name": "jordan series es",
+        "category": "6.5",
+        "price": "125.50",
+        "imgSrc": "assets/images/products/jordan-series-es.png",
+        "imgSrc2": "assets/images/products/jordan-series-es-2.webp"
     },
     {
-        "name" : "Bunk bed",
-        "category" : "Bed",
-        "price" : "6",
-        "imgSrc" : "images/bunk-bed.png"
+        "name": "chuck '70 recycled",
+        "category": "10",
+        "price": "6",
+        "imgSrc": "assets/images/products/chuck.webp",
+        "imgSrc2": "assets/images/products/chuck-2.webp"
     },
     {
-        "name" : "Cabinet",
-        "category" : "Cabinet",
-        "price" : "5.5",
-        "imgSrc" : "images/cabinet.png"
+        "name": "power hurrikaze",
+        "category": "Cabinet",
+        "price": "65.00",
+        "imgSrc": "assets/images/products/power-ranger-hurrikaze.webp",
+        "imgSrc2": "assets/images/products/power-ranger-hurrikaze-2.webp"
     },
     {
-        "name" : "Card table",
-        "category" : "Table",
-        "price" : "8",
-        "imgSrc" : "images/card-table.png"
+        "name": "574 lifestyle",
+        "category": "10",
+        "price": "75.00",
+        "imgSrc": "assets/images/products/574-lifestyle.webp",
+        "imgSrc2": "assets/images/products/574-lifestyle-2.webp"
     },
     {
-        "name" : "Cushion",
-        "category" : "Cushion",
-        "price" : "11",
-        "imgSrc" : "images/cushion.png"
+        "name": "chuck '70 recycled",
+        "category": "10",
+        "price": "6",
+        "imgSrc": "assets/images/products/chuck.webp",
+        "imgSrc2": "assets/images/products/chuck-2.webp"
     },
     {
-        "name" : "Desk",
-        "category" : "Desk",
-        "price" : "10",
-        "imgSrc" : "images/desk.png"
+        "name": "air flight lite mid",
+        "category": "7",
+        "price": "50.25",
+        "imgSrc": "assets/images/products/power-ranger-hurrikaze.webp",
+        "imgSrc2": "assets/images/products/power-ranger-hurrikaze-2.webp"
     },
     {
-        "name" : "Drawer",
-        "category" : "Drawer",
-        "price" : "8",
-        "imgSrc" : "images/drawer.png"
+        "name": "jordan series es",
+        "category": "6.5",
+        "price": "125.50",
+        "imgSrc": "assets/images/products/jordan-series-es.png",
+        "imgSrc2": "assets/images/products/jordan-series-es-2.webp"
     },
     {
-        "name" : "Office chair",
-        "category" : "Chair",
-        "price" : "9",
-        "imgSrc" : "images/office-chair.png"
-    },
-    {
-        "name" : "Scissors chair",
-        "category" : "Chair",
-        "price" : "69.20",
-        "imgSrc" : "images/scissors-chair.png"
-    },
-    {
-        "name" : "Sleeper sofa",
-        "category" : "Sofa",
-        "price" : "224.99",
-        "imgSrc" : "images/sleeper-sofa.png"
-    },
-    {
-        "name" : "Sleigh bed",
-        "category" : "Bed",
-        "price" : "90.25",
-        "imgSrc" : "images/sleigh-bed.png"
-    },
-    {
-        "name" : "Sofa bed",
-        "category" : "Bed",
-        "price" : "99.99",
-        "imgSrc" : "images/sofa-bed.png"
-    },
-    {
-        "name" : "White armchair",
-        "category" : "Chair",
-        "price" : "75.80",
-        "imgSrc" : "images/white-armchair.png"
-    },
-    {
-        "name" : "White sofa",
-        "category" : "Sofa",
-        "price" : "159.00",
-        "imgSrc" : "images/white-sofa.png"
-    },
-    {
-        "name" : "Wing chair",
-        "category" : "Chair",
-        "price" : "100.50",
-        "imgSrc" : "images/wing-chair.png"
-    },
-    {
-        "name" : "Wooden armchair",
-        "category" : "Chair",
-        "price" : "187.45",
-        "imgSrc" : "images/wooden-armchair.png"
-    },
-    {
-        "name" : "Wooden dining table",
-        "category" : "Table",
-        "price" : "322.50",
-        "imgSrc" : "images/wooden-dining-table.png"
-    },
-    {
-        "name" : "Wooden table",
-        "category" : "Table",
-        "price" : "288.99",
-        "imgSrc" : "images/wooden-table.png"
+        "name": "chuck '70 recycled",
+        "category": "10",
+        "price": "6",
+        "imgSrc": "assets/images/products/chuck.webp",
+        "imgSrc2": "assets/images/products/chuck-2.webp"
     }
+
 ]

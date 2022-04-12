@@ -46,15 +46,19 @@ function loadJSON() {
                 <div class = "item" id="buyItems">
                     <div class = "product-img">
                         <img src = "${product.imgSrc}" alt = "product image">
+                          <img class="image-hover" src="${product.imgSrc2}">
                         <button type = "button" class = "add-to-cart-btn">
                             <i class = "fas fa-shopping-cart"></i>Add To Cart
                         </button>
                     </div>
 
                     <div class = "product-content">
+                                <div class = "product-content-left">
                         <h3 class = "product-name">${product.name}</h3>
-                        <span class = "product-category">${product.category}</span>
-                        <p class = "product-price">$${product.price}</p>
+                             <p class = "product-price">$${product.price}</p>
+                               </div>
+                                 <span class = "product-category">size:${product.category}</span>
+                   
                     </div>
                 </div>
             `;
