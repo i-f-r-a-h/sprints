@@ -33,7 +33,7 @@ header {
         display: grid;
         top: 75px;
         right: -100vw;
-        transition: right 2s cubic-bezier(1, 0, 0, 1);
+        transition: right .3s cubic-bezier(1, 0, 0, 1);
         overflow: hidden;
         padding-top: 50px;
         z-index: 5;

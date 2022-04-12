@@ -1,6 +1,31 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
+/// Regular font family
+/// @type List
+$primary-font-stack: 'Poppins',
+'Helvetica Neue Light',
+'Helvetica Neue',
+'Helvetica',
+'Arial',
+sans-serif !default;
+
+/// secondary font family
+/// @type List
+$secondary-font-stack: 'Montserrat',
+'Helvetica Neue Light',
+'Helvetica Neue',
+'Helvetica',
+'Arial',
+sans-serif !default;
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
 
 /**
  * Set up a decent box model on the root element
@@ -42,7 +67,7 @@ h5,
 p,
 figure,
 picture {
-    margin: 0; 
+  margin: 0;
 }
 
 /* make form elements easier to work with */
@@ -50,11 +75,11 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
-.container{
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }

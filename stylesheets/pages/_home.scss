@@ -2,6 +2,99 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
+//confirmation page
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 400px;
+  padding: 5rem 0;
+  margin: auto;
+  text-align: center;
+
+  a {
+    font-family: $primary-font-stack;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    transition: background-color .1s ease-in-out, box-shadow .3s ease-in-out;
+
+    &:hover {
+      background-color: #275EFE;
+      color: white;
+      box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.9);
+    }
+  }
+}
+//banner
+.banner {
+    padding: 0 30px;
+    width: 100%;
+    position: relative;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid black;
+    }
+
+    picture {
+        margin-left: auto;
+        /* 2 */
+        margin-right: auto;
+        /* 2 */
+
+    }
+
+    a {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        margin-right: -50%;
+        bottom: 10%;
+        left: 50%;
+        font-family: $primary-font-stack;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: black;
+        background-color: white;
+        border: 2px solid black;
+        padding: 10px 30px;
+        margin-top: 20px;
+        border-radius: 20px;
+        transition: background-color .1s ease-in-out, box-shadow .3s ease-in-out;
+
+        &:hover {
+            background-color: #275EFE;
+            color: white;
+            box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.9);
+        }
+    }
+
+
+
+    @media (min-width:1200px) {
+        img {
+            max-width: 1300px;
+            margin: auto;
+            display: flex;
+            width: 100%;
+        }
+
+        a {
+            font-size: 1.8rem;
+        }
+
+        source {
+            border: none;
+        }
+    }
+}
+
 
 .cat {
 
