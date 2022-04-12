@@ -5,30 +5,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SPRINT | Home</title>
-    <!-- icon kit -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7be4e2fa54.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <!-- icon kits -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- stylesheets -->
     <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- js scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 </head>
 
 <body>
-         <div class="cursor"></div>
-        <div class="cursor-follower"></div>
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
     <!-- header  -->
     <header>
         <div class="dsk-wrapper">
-            <!-- navbar -->
             <!-- mobile navigation -->
             <div class="hamburger-menu">
                 <span class="material-icons menu__trigger js-trigger">menu</span>
@@ -61,10 +56,12 @@
                 <a class="logo-js" href="index.html"><img class="logo" src="assets/logo/logo.svg"
                         alt="sprints logo"></a>
             </div>
+            <!-- nav icons -->
             <div class="nav-icons">
                 <span class="material-icons-outlined">search</span>
                 <span class="material-icons-outlined material-icons--hide account-js">person_outline</span>
                 <span class="material-icons-outlined material-icons--hide">favorite_border</span>
+                <!-- shopping cart -->
                 <div class="cart">
                     <div id="cart-btn">
                         <span class="material-icons-outlined">
@@ -113,6 +110,7 @@
                         </a>
                     </div>
                 </div>
+                <!-- account -->
                 <div class="account">
                     <p>Create an account or log in to view your orders, return or adjust your personal information
                     </p>
@@ -125,10 +123,11 @@
             </nav>
             <!-- end of navbar -->
         </div>
-
     </header>
     <!-- end of header -->
-     <!-- <div class="loader-container">
+
+    <!-- page loader -->
+    <div class="loader-container">
         <div class="text-wrapper">
             <div><svg width="663" height="94" viewBox="0 0 663 94" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="text-1 text"
@@ -193,14 +192,15 @@
                 </svg>
             </div>
         </div>
-    </div>  -->
-    <!-- promo section -->
+    </div>
+
+    <!-- gallery section -->
     <section class="promo">
         <div class="slider">
             <div class="slide active">
                 <div class="slide__text">
                     <h1><span>the new</span>
-                        <span>Blazer</span>
+                        <span class="rev-block blazer">Blazer</span>
                         <span>sneaker</span>
                         <span>collection</span></h1>
                     <p>Pushing the limits of your next steps with comfort and
@@ -209,13 +209,13 @@
                     <a href="">shop the collection</a>
                 </div>
                 <div class="slide__image">
-                    <img src="assets/images/products/blazer-low-77-jumbo.png" alt="">
+                    <img class="slide__image--inner" src="assets/images/products/blazer-low-77-jumbo.png" alt="">
                 </div>
             </div>
             <div class="slide">
                 <div class="slide__text">
                     <h1><span>the new</span>
-                        <span>adidas</span>
+                        <span class="rev-block adidas">adidas</span>
                         <span>sneaker</span>
                         <span>collection</span></h1>
                     <p>Pushing the limits of your next steps with comfort and
@@ -223,15 +223,15 @@
                         durability.</p>
                     <a href="">shop the collection</a>
                 </div>
-                <div class="slide__image">
-                    <img src="assets/images/products/adidas.png" alt="">
+                <div class="slide__image adidas">
+                    <img class="slide__image--inner" src="assets/images/products/adidas.png" alt="">
                 </div>
 
             </div>
             <div class="slide">
                 <div class="slide__text">
                     <h1><span>the new</span>
-                        <span>jordan</span>
+                        <span class="rev-block">jordan</span>
                         <span>sneaker</span>
                         <span>collection</span></h1>
                     <p>Pushing the limits of your next steps with comfort and
@@ -239,14 +239,14 @@
                         durability.</p>
                     <a href="">shop the collection</a>
                 </div>
-                <div class="slide__image">
-                    <img src="assets/images/products/jordan-series-es.png" alt="">
+                <div class="slide__image jordan">
+                    <img class="slide__image--inner" src="assets/images/products/jordan-series-es.png" alt="">
                 </div>
             </div>
             <div class="slide">
                 <div class="slide__text">
                     <h1><span>the new</span>
-                        <span>Balance</span>
+                        <span class="rev-block balance">Balance</span>
                         <span>sneaker</span>
                         <span>collection</span></h1>
                     <p>Pushing the limits of your next steps with comfort and
@@ -254,8 +254,8 @@
                         durability.</p>
                     <a href="">shop the collection</a>
                 </div>
-                <div class="slide__image">
-                    <img src="assets/images/products/new-balance.png" alt="">
+                <div class="slide__image balance">
+                    <img class="slide__image--inner" src="assets/images/products/new-balance.png" alt="">
                 </div>
             </div>
             <div class="navigation">
@@ -271,9 +271,10 @@
         </div>
 
     </section>
+
+
     <!-- categories -->
     <section class="cat">
-
         <div class="cat__wrapper">
             <div class="cat__cards">
                 <img class="cat__image" src="assets/images/cats/womens.jpg" alt="" srcset="">
@@ -292,30 +293,18 @@
         </div>
     </section>
 
+
     <!-- products section  -->
     <section class="products new-releases">
         <h3 class="products__title">new releases</h3>
         <div class="grid-item">
             <div class="items">
-                <!-- single item -->
-                <!-- <div class = "product-item">
-            <div class = "product-img">
-              <img src = "images/bed.png" alt = "product image">
-              <button type = "button" class = "add-to-cart-btn">
-                <i class = "fas fa-shopping-cart"></i>Add To Cart
-              </button>
-            </div>
-
-            <div class = "product-content">
-              <h3 class = "product-name">Wooden Bed</h3>
-              <span class = "product-category">Bed</span>
-              <p class = "product-price">$120.00</p>
-            </div>
-          </div> -->
-                <!-- end of single item -->
             </div>
         </div>
     </section>
+
+
+    <!-- banner section -->
     <section class="banner">
         <picture>
             <source media="(min-width:800px)" srcset="assets/images/cats/banner.webp">
@@ -323,7 +312,7 @@
         </picture>
         <a href="#" class="">shop now</a>
     </section>
-    <!-- end of products section -->
+
 
     <!-- mailing list -->
     <section class="mailing-list">
@@ -340,6 +329,8 @@
             </div>
         </a>
     </section>
+
+
     <!-- footer -->
     <footer class="footer">
         <div class="footer__wrapper">
@@ -454,13 +445,10 @@
 
 
 
-
-
-
-    <script src="app.js"></script>
+    <!-- scripts -->
+    <script src="js/app.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/cart.js"></script>
-
 </body>
 
 </html>
