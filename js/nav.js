@@ -1,48 +1,71 @@
-const menuIcon = document.querySelector('.js-trigger');
-const navbar = document.querySelector('.nav');
-const menuLink = document.querySelector('.nav__list-item');
-const a = document.querySelectorAll('a');
+/*===============================================================================
 
-//when the hamburger is clicked, menu opens
-menuIcon.addEventListener('click', () => {
-  navbar.classList.toggle('nav-change');
+    Table of contents for navigation within the site
+
+    1.variables and constants
+    2.hamburger menu toggle
+    3.menu link toggle
+    4.account pop up toggle
+    5.nav on scroll change
+
+    IMAGE GALLERY
+    6.image slider next button
+    7.image slider previous button
+    8.image slider autoplay
+
+    PRODUCT SLIDER
+    //9.product slider
+
+===============================================================================*/
+
+
+
+
+//1.variables and constants
+const a = document.querySelectorAll('a');
+const slider = document.querySelector(".slider");
+const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
+const slides = document.querySelectorAll(".slide");
+const slideIcons = document.querySelectorAll(".slide-icon");
+const productSlider = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+const numberOfSlides = slides.length;
+var playSlider;
+var slideNumber = 0;
+
+//2.hamburger menu toggle
+$('.js-trigger').click(() => {
+  $('.nav').toggleClass('nav-change');
 });
-//when a link is clicked, menu closes
+
+
+//3.menu link toggle
 a.forEach(item => {
   item.addEventListener('click', () => {
     navbar.classList.remove('nav-change');
   });
 });
 
-//account
-const account = document.querySelector('.account-js');
-const displayAccount = document.querySelector('.account')
-account.addEventListener('click', () => {
-  displayAccount.classList.toggle('account-change');
+
+//4.account pop up toggle
+$('.account-js').click(() => {
+  $('.account').toggleClass('account-change');
 });
 
-//nav on scroll change
+//5.nav on scroll change
 window.addEventListener('scroll', function () {
   let logo = document.querySelector('.logo-js');
   logo.classList.toggle('sticky', window.scrollY > 2);
-
   let header = document.querySelector('header');
   header.classList.toggle('sticky-nav', window.scrollY > 1);
-  // when the user scrolls past 400 the colour changes of the header.
 });
 
 
-//gallery
 
-const slider = document.querySelector(".slider");
-const nextBtn = document.querySelector(".next-btn");
-const prevBtn = document.querySelector(".prev-btn");
-const slides = document.querySelectorAll(".slide");
-const slideIcons = document.querySelectorAll(".slide-icon");
-const numberOfSlides = slides.length;
-var slideNumber = 0;
-
-//image slider next button  
+//6.image slider next button  
 nextBtn.addEventListener("click", () => {
   slides.forEach((slide) => {
     slide.classList.remove("active");
@@ -61,7 +84,7 @@ nextBtn.addEventListener("click", () => {
   slideIcons[slideNumber].classList.add("active");
 });
 
-//image slider previous button
+//7.image slider previous button
 prevBtn.addEventListener("click", () => {
   slides.forEach((slide) => {
     slide.classList.remove("active");
@@ -80,9 +103,7 @@ prevBtn.addEventListener("click", () => {
   slideIcons[slideNumber].classList.add("active");
 });
 
-//image slider autoplay
-var playSlider;
-
+//8.image slider autoplay
 var repeater = () => {
   playSlider = setInterval(function () {
     slides.forEach((slide) => {
@@ -116,11 +137,7 @@ slider.addEventListener("mouseout", () => {
 
 
 
-// slider
-const productSlider = document.querySelector('.items');
-let isDown = false;
-let startX;
-let scrollLeft;
+//9.product slider
 if (productSlider) {
   productSlider.addEventListener('mousedown', (e) => {
     isDown = true;
@@ -143,62 +160,5 @@ if (productSlider) {
     const walk = (x - startX) * 3; //scroll-fast
     productSlider.scrollLeft = scrollLeft - walk;
     console.log(walk);
-  });
-}
-
-
-
-
-
-
-
-setTimeout(function () {
-  $('.text-wrapper').css('display', 'none');
-}, 4000);
-
-
-
-//gallery
-animteHover();
-
-function animteHover() {
-  var $img = $(".slide__image");
-
-  $img.mousemove(function (e) {
-    var xPos = $(this).data("xPos");
-    var yPos = $(this).data("yPos");
-    var mouseX = e.pageX;
-    var mouseY = e.pageY;
-    var left = mouseX - xPos;
-    var top = mouseY - yPos;
-    var origin = "center center -300";
-    var xPerc =
-      ((left - $(this).data("itemWidth") / 2) / $(this).data("itemWidth")) * 200;
-    var yPerc =
-      ((top - $(this).data("itemHeight") / 2) / $(this).data("itemHeight")) * 200;
-
-    TweenMax.to($(this).data("imgOuter"), 3, {
-      rotationX: 0.1 * yPerc,
-      rotationY: -0.1 * xPerc,
-      transformOrigin: origin,
-      ease: Expo.easeOut,
-    });
-  });
-
-  $img.each(function () {
-    $(this).data("xPos", $(this).offset().left);
-    $(this).data("yPos", $(this).offset().top);
-    $(this).data("itemWidth", $(this).width());
-    $(this).data("itemHeight", $(this).height());
-    $(this).data("imgOuter", $(this).find(".slide__image--inner"));
-  });
-
-  $img.on("mouseleave", function () {
-    TweenMax.to($(this).data("imgOuter"), 3, {
-      rotationX: 0,
-      rotationY: 0,
-      transformOrigin: origin,
-      ease: Expo.easeOut,
-    });
   });
 }

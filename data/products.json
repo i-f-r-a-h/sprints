@@ -1,0 +1,72 @@
+[{
+        "name": "air flight lite mid",
+        "category": "7",
+        "price": "50.25",
+        "imgSrc": "assets/images/products/power-ranger-hurrikaze.webp",
+        "imgSrc2": "assets/images/products/power-ranger-hurrikaze-2.webp"
+    },
+    {
+        "name": "574 lifestyle",
+        "category": "10",
+        "price": "75.00",
+        "imgSrc": "assets/images/products/574-lifestyle.webp",
+        "imgSrc2": "assets/images/products/574-lifestyle-2.webp"
+    },
+    {
+        "name": "jordan series es",
+        "category": "6.5",
+        "price": "125.50",
+        "imgSrc": "assets/images/products/jordan-series-es.png",
+        "imgSrc2": "assets/images/products/jordan-series-es-2.webp"
+    },
+    {
+        "name": "chuck '70 recycled",
+        "category": "10",
+        "price": "6",
+        "imgSrc": "assets/images/products/chuck.webp",
+        "imgSrc2": "assets/images/products/chuck-2.webp"
+    },
+    {
+        "name": "power hurrikaze",
+        "category": "Cabinet",
+        "price": "65.00",
+        "imgSrc": "assets/images/products/power-ranger-hurrikaze.webp",
+        "imgSrc2": "assets/images/products/power-ranger-hurrikaze-2.webp"
+    },
+    {
+        "name": "574 lifestyle",
+        "category": "10",
+        "price": "75.00",
+        "imgSrc": "assets/images/products/574-lifestyle.webp",
+        "imgSrc2": "assets/images/products/574-lifestyle-2.webp"
+    },
+    {
+        "name": "chuck '70 recycled",
+        "category": "10",
+        "price": "6",
+        "imgSrc": "assets/images/products/chuck.webp",
+        "imgSrc2": "assets/images/products/chuck-2.webp"
+    },
+    {
+        "name": "air flight lite mid",
+        "category": "7",
+        "price": "50.25",
+        "imgSrc": "assets/images/products/power-ranger-hurrikaze.webp",
+        "imgSrc2": "assets/images/products/power-ranger-hurrikaze-2.webp"
+    },
+    {
+        "name": "jordan series es",
+        "category": "6.5",
+        "price": "125.50",
+        "imgSrc": "assets/images/products/jordan-series-es.png",
+        "imgSrc2": "assets/images/products/jordan-series-es-2.webp"
+    },
+    {
+        "name": "chuck '70 recycled",
+        "category": "10",
+        "price": "6",
+        "imgSrc": "assets/images/products/chuck.webp",
+        "imgSrc2": "assets/images/products/chuck-2.webp"
+    }
+
+]

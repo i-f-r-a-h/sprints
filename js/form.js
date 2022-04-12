@@ -1,6 +1,26 @@
+/*===============================================================================
+
+    Table of contents
+
+    1.variables and constants
+    2.function:display error
+    3.function:display success
+
+    FORM
+    4.email validation
+    5.password validation
+    6.confirm password validation
+    7.age verification
+    8.checkbox verification
+    9.success/error animation
+
+===============================================================================*/
+
+
+
 window.addEventListener("DOMContentLoaded", function () {
 
-    //variables
+    //1.variables and constants
     const submit = document.querySelector('input[type="button"]');
     let checkbox = document.querySelector('input[type="checkbox"]');
     let password = document.querySelector('#pwd');
@@ -10,7 +30,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let validation = /^([a-zA-Z0-9\._-]+)@([a-zA-Z0-9\._-]+).([a-z]{2,10})$/;
 
 
-    //function to display an error
+    //2.function:display error
     function displayError(id, message) {
         document.querySelector(`.error--${id}`).style.display = 'block';
         document.querySelector(`.error--${id}`).style.transition = '5s ease-in';
@@ -18,7 +38,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    //function to hide error and display success
+    //3.function:display success
     function success(target) {
         document.querySelector(`.error--${target}`).style.display = 'none';
         document.querySelector(`#${target}`).className += " success";
@@ -28,7 +48,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
     submit.addEventListener('click', (e) => {
-        //email
+        //4.email validation
         if (email.value == '') {
             displayError('email', 'blank: please enter an email');
         } else if (!email.value.match(validation)) {
@@ -37,7 +57,7 @@ window.addEventListener("DOMContentLoaded", function () {
             success('email');
         }
 
-        //password
+        //5.password validation
         if (password.value == '' || password.value == null || password.value.indexOf(' ') >= 0) {
             displayError('pwd', 'blank: please enter a password without any blanks');
         } else if (password.value.length > 0 && password.value.length < 8) {
@@ -46,7 +66,7 @@ window.addEventListener("DOMContentLoaded", function () {
             success('pwd');
         }
 
-        //confirm password
+        //6.confirm password validation
         if (confirmPwd.value == '') {
             displayError('confirmPwd', 'confirm pwd should not be blank');
         } else if (password.value !== confirmPwd.value) {
@@ -55,7 +75,7 @@ window.addEventListener("DOMContentLoaded", function () {
             success('confirmPwd');
         }
 
-        //age
+        //7.age verification
         var today = new Date();
         var birthDate = new Date(age.value);
         var userAge = today.getFullYear() - birthDate.getFullYear();
@@ -76,7 +96,7 @@ window.addEventListener("DOMContentLoaded", function () {
             displayError('age', 'invalid age');
         }
 
-        // checkbox
+        //8.checkbox verification
         if (checkbox.checked) {
             success('check');
         } else {
@@ -84,7 +104,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        //only runs animation when all inputs are valid
+        //9.success animation
         if ($('.success').length > 0) {
             $(submit).addClass('send');
             $(submit).one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
@@ -115,46 +135,3 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-
-/*
-function checkStrength(password) {
-    let strength = 0;
-
-    //If password contains both lower and uppercase characters
-    if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
-        strength += 1;
-        lowUpperCase.classList.remove('fa-circle');
-        lowUpperCase.classList.add('fa-check');
-    }
-    //If it has numbers and characters
-    if (password.match(/([0-9])/)) {
-        strength += 1;
-    }
-    //If it has one special character
-    if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
-        strength += 1;
-    }
-    //If password is greater than 7
-    if (password.length > 7) {
-        strength += 1;
-    }
-
-    // If value is less than 2
-    if (strength < 2) {
-        passwordStrength.classList.remove('progress-bar-warning');
-        passwordStrength.classList.remove('progress-bar-success');
-        passwordStrength.classList.add('progress-bar-danger');
-        passwordStrength.style = 'width: 10%';
-    } else if (strength == 3) {
-        passwordStrength.classList.remove('progress-bar-success');
-        passwordStrength.classList.remove('progress-bar-danger');
-        passwordStrength.classList.add('progress-bar-warning');
-        passwordStrength.style = 'width: 60%';
-    } else if (strength == 4) {
-        passwordStrength.classList.remove('progress-bar-warning');
-        passwordStrength.classList.remove('progress-bar-danger');
-        passwordStrength.classList.add('progress-bar-success');
-        passwordStrength.style = 'width: 100%';
-    }
-}
-*/
