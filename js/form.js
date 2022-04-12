@@ -29,10 +29,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
     submit.addEventListener('click', (e) => {
         //email
-        if (!email.value.match(validation)) {
-            displayError('email', 'Invalid:include @ symbol in your email');
-        } else if (email.value == '') {
+        if (email.value == '') {
             displayError('email', 'blank: please enter an email');
+        } else if (!email.value.match(validation)) {
+            displayError('email', 'Invalid: incorrect formatting. Include @ and .domain');
         } else {
             success('email');
         }
@@ -56,7 +56,6 @@ window.addEventListener("DOMContentLoaded", function () {
         }
 
         //age
-        //age checker
         var today = new Date();
         var birthDate = new Date(age.value);
         var userAge = today.getFullYear() - birthDate.getFullYear();
@@ -73,6 +72,8 @@ window.addEventListener("DOMContentLoaded", function () {
             }
         } else if (age.value == '') {
             displayError('age', 'age should not be blank');
+        } else {
+            displayError('age', 'invalid age');
         }
 
         // checkbox
@@ -84,16 +85,76 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
         //only runs animation when all inputs are valid
-        if (checkbox.className == ' success' &&
-            age.className == ' success' &&
-            confirmPwd.className == ' success' &&
-            password.className == ' success' &&
-            email.className == ' success') {
-            submit.className += 'send';
+        if ($('.success').length > 0) {
+            $(submit).addClass('send');
+            $(submit).one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+                function (e) {
+                    // code to execute after animation ends
+                    $(submit).removeClass('send');
+                });
+
+
+            //redirect to confirmation
+            $.ajax({
+                type: "GET",
+                url: "confirmation.html",
+                success: function (result) {
+                    $(".form__container").html(result);
+                }
+            });
+
         } else {
-            submit.className += 'wobble';
+            $(submit).addClass('wobble');
+            $(submit).one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+                function (e) {
+                    // code to execute after animation ends
+                    $(submit).removeClass('wobble');
+                });
 
         }
     });
 
 });
+
+/*
+function checkStrength(password) {
+    let strength = 0;
+
+    //If password contains both lower and uppercase characters
+    if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
+        strength += 1;
+        lowUpperCase.classList.remove('fa-circle');
+        lowUpperCase.classList.add('fa-check');
+    }
+    //If it has numbers and characters
+    if (password.match(/([0-9])/)) {
+        strength += 1;
+    }
+    //If it has one special character
+    if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
+        strength += 1;
+    }
+    //If password is greater than 7
+    if (password.length > 7) {
+        strength += 1;
+    }
+
+    // If value is less than 2
+    if (strength < 2) {
+        passwordStrength.classList.remove('progress-bar-warning');
+        passwordStrength.classList.remove('progress-bar-success');
+        passwordStrength.classList.add('progress-bar-danger');
+        passwordStrength.style = 'width: 10%';
+    } else if (strength == 3) {
+        passwordStrength.classList.remove('progress-bar-success');
+        passwordStrength.classList.remove('progress-bar-danger');
+        passwordStrength.classList.add('progress-bar-warning');
+        passwordStrength.style = 'width: 60%';
+    } else if (strength == 4) {
+        passwordStrength.classList.remove('progress-bar-warning');
+        passwordStrength.classList.remove('progress-bar-danger');
+        passwordStrength.classList.add('progress-bar-success');
+        passwordStrength.style = 'width: 100%';
+    }
+}
+*/

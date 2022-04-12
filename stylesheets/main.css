@@ -440,78 +440,80 @@ p {
   line-height: 28px;
 }
 
-/**
- * Clear inner floats
- */
-.clearfix::after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-/**
- * Main content containers
- * 1. Make the container full-width with a maximum width
- * 2. Center it in the viewport
- * 3. Leave some space on the edges, especially valuable on small screens
- */
-.container {
-  max-width: 1980px;
-  /* 1 */
-  margin-left: auto;
-  /* 2 */
-  margin-right: auto;
-  /* 2 */
-  padding-left: 20px;
-  /* 3 */
-  padding-right: 20px;
-  /* 3 */
-  width: 100%;
-  /* 1 */
-}
-
-/**
- * Hide text while making it readable for screen readers
- * 1. Needed in WebKit-based browsers because of an implementation bug;
- *    See: https://code.google.com/p/chromium/issues/detail?id=457146
- */
-.hide-text {
-  overflow: hidden;
-  padding: 0;
-  /* 1 */
-  text-indent: 101%;
-  white-space: nowrap;
-}
-
-/**
- * Hide element while making it readable for screen readers
- * Shamelessly borrowed from HTML5Boilerplate:
- * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
- */
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
+.cursor {
   position: absolute;
-  width: 1px;
+  background: #020e69;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  z-index: 1;
+  -webkit-transition: 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  z-index: 999999;
 }
 
-/* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.cursor::before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  text-align: center;
+  content: "shop the collection";
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.cursor.active-mouse {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: 250px;
+  height: 50px;
+  border-radius: 30px;
+  background: white;
+  border: 1px solid black;
+}
+
+.cursor.active-mouse::before {
+  opacity: 1;
+}
+
+.cursor-follower {
+  position: absolute;
+  background: rgba(42, 235, 239, 0.685);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  z-index: 1;
+  -webkit-transition: 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+  z-index: 999999;
+}
+
+.cursor-follower.active-mouse {
+  opacity: 1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 header {
@@ -933,7 +935,6 @@ header .nav-icons .material-icons-outlined--hide {
   width: 100%;
   height: 1100px;
   margin-top: 70px;
-  overflow: hidden;
 }
 
 .slide {
@@ -950,20 +951,24 @@ header .nav-icons .material-icons-outlined--hide {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-clip-path: circle(0% at 0 0%);
-          clip-path: circle(0% at 0 0%);
+  -webkit-clip-path: circle(0% at 0 50%);
+          clip-path: circle(0% at 0 50%);
 }
 
-.slider .active {
-  -webkit-clip-path: circle(150% at 0 0%);
-          clip-path: circle(150% at 0 0%);
-}
-
-.slider .active .slide__image {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.slider .slide.active {
+  -webkit-clip-path: circle(150% at 0 50%);
+          clip-path: circle(150% at 0 50%);
   -webkit-transition: 2s;
   transition: 2s;
+}
+
+.slider .slide.active .slide__image {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: -webkit-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
 }
 
 .navigation {
@@ -990,8 +995,8 @@ header .nav-icons .material-icons-outlined--hide {
 .next-btn {
   z-index: 999;
   font-size: 2em;
-  color: #222;
-  background: rgba(255, 255, 255, 0.8);
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
   padding: 10px;
   cursor: pointer;
 }
@@ -1047,6 +1052,10 @@ header .nav-icons .material-icons-outlined--hide {
   place-items: center;
   -ms-grid-row: 1;
       grid-row-start: 1;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  -webkit-clip-path: inset(0% 0% 0% 0% round 0vw);
+          clip-path: inset(0% 0% 0% 0% round 0vw);
 }
 
 .slide__image img {
@@ -1206,6 +1215,44 @@ header .nav-icons .material-icons-outlined--hide {
     -webkit-transform: translateY(60px);
             transform: translateY(60px);
   }
+}
+
+.confirmation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  max-width: 400px;
+  padding: 5rem 0;
+  margin: auto;
+  text-align: center;
+}
+
+.confirmation a {
+  font-family: "Poppins", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 20px;
+  -webkit-transition: background-color .1s ease-in-out, -webkit-box-shadow .3s ease-in-out;
+  transition: background-color .1s ease-in-out, -webkit-box-shadow .3s ease-in-out;
+  transition: background-color .1s ease-in-out, box-shadow .3s ease-in-out;
+  transition: background-color .1s ease-in-out, box-shadow .3s ease-in-out, -webkit-box-shadow .3s ease-in-out;
+}
+
+.confirmation a:hover {
+  background-color: #275EFE;
+  color: white;
+  -webkit-box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.9);
+          box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.9);
 }
 
 /* js related class */
@@ -1838,12 +1885,12 @@ button:hover {
 }
 
 .cat__image {
-  width: 100%;
-  height: 100%;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
+  max-width: 100%;
+  opacity: 0.6;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  -webkit-transform-origin: 90% center;
+          transform-origin: 90% center;
 }
 
 .cat__cards {
@@ -1851,11 +1898,19 @@ button:hover {
   min-height: 100%;
   border: 2px solid black;
   overflow: hidden;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.cat__cards:hover {
+  -webkit-transform: translateX(-1rem);
+          transform: translateX(-1rem);
 }
 
 .cat__cards:hover .cat__image {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  opacity: 0.8;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .cat__card {

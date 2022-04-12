@@ -21,16 +21,19 @@
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 5rem;
         margin: auto;
-            @media (min-width: 800px) {
-        height: 500px !important;
-    }
+
+        @media (min-width: 800px) {
+            height: 500px !important;
+        }
     }
 
     &__image {
-        width: 100%;
-        height: 100%;
-        transition: transform .5s ease;
+        max-width: 100%;
+        opacity: 0.6;
+        transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+        transform-origin: 90% center;
     }
+
 
 
     &__cards {
@@ -38,10 +41,14 @@
         min-height: 100%;
         border: 2px solid rgb(0, 0, 0);
         overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
 
         &:hover {
+            transform: translateX(-1rem);
+
             .cat__image {
-                transform: scale(1.1);
+                opacity: 0.8;
+                transform: scale(1.2);
             }
         }
     }

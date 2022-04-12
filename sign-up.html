@@ -2,68 +2,134 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRINT Footwear</title>
+    <title>SPRINT | Home</title>
     <!-- icon kit -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/7be4e2fa54.js" crossorigin="anonymous"></script>
-    <!-- stylesheets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="stylesheets/main.css">
 </head>
 
 
 <body>
-    <!-- header -->
-    <header class="container">
-        <!-- mobile navigation -->
-        <div class="hamburger-menu">
-            <span class="material-icons menu__trigger js-trigger">menu</span>
-        </div>
-        <!-- navigation -->
-        <nav class="nav nav--primary ">
-            <ul class="nav__list nav-items-primary">
-                <li class="nav__list-item nav__list-item--active">
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="nav__list-item">
-                    <a href="shop.html">Women</a>
-                </li>
-                <li class="nav__list-item">
-                    <a href="shop.html">Men</a>
-                </li>
-                <li class="nav__list-item">
-                    <a href="shop.html">Kids</a>
-                </li>
-                <li class="nav__list-item">
-                    <a href="shop.html">Apparel</a>
-                </li>
-                <li class="nav__list-item">
-                    <a href="shop.html">Sale</a>
-                </li>
-                <li class="nav__list-item nav__list-item--hide">
-                    <a href="shop.html">Account</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- logo -->
-        <div class="logo">
-            <a href="index.html"><img class="logo" src="assets/logo/logo.svg" alt="sprints logo"></a>
+   <!-- header -->
+     <header>
+        <div class="dsk-wrapper">
+            <!-- navbar -->
+            <!-- mobile navigation -->
+            <div class="hamburger-menu">
+                <span class="material-icons menu__trigger js-trigger">menu</span>
+            </div>
+            <!-- navigation -->
+            <nav class="nav nav--primary ">
+                <ul class="nav__list nav-items-primary">
+                    <li class="nav__list-item">
+                        <a href="shop.html">Women</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="shop.html">Men</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="shop.html">Kids</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="shop.html">Apparel</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="shop.html">Sale</a>
+                    </li>
+                    <li class="nav__list-item nav__list-item--hide">
+                        <a href="login.html">Account</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- logo -->
+            <div class="logo">
+                <a href="index.html"><img class="logo" src="assets/logo/logo.svg"
+                        alt="sprints logo"></a>
+            </div>
+            <div class="nav-icons">
+                <span class="material-icons-outlined">search</span>
+                <span class="material-icons-outlined material-icons--hide account-js">person_outline</span>
+                <span class="material-icons-outlined material-icons--hide">favorite_border</span>
+                <div class="cart">
+                    <div id="cart-btn">
+                        <span class="material-icons-outlined">
+                            shopping_cart
+                        </span>
+                        <span id="cart-count-info"></span>
+                    </div>
+
+                    <div class="cart-container">
+                        <div class="cart-header">
+                            <h3>Your cart</h3>
+                            <span class="material-icons-outlined" id="cart-container-close">
+                                close
+                            </span>
+                        </div>
+
+                        <div class="cart-list">
+                            <p class="cart-alert">You've got nothing in your cart 🥺</p>
+
+                        </div>
+
+                        <div class="cart-total">
+                            <h3>Subtotal: </h3>
+                            <span id="cart-total-value"></span>
+                        </div>
+                        <a href="#" class="button button--atlas checkout"><span>proceed to checkout</span>
+                            <div class="marquee" aria-hidden="true">
+                                <div class="marquee__inner">
+                                    <span>proceed to checkout</span>
+                                    <span>proceed to checkout</span>
+                                    <span>proceed to checkout</span>
+                                    <span>proceed to checkout</span>
+
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="button button--atlas checkout"><span>continue shopping</span>
+                            <div class="marquee" aria-hidden="true">
+                                <div class="marquee__inner">
+                                    <span>continue shopping</span>
+                                    <span>continue shopping</span>
+                                    <span>continue shopping</span>
+                                    <span>continue shopping</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="account">
+                    <p>Create an account or log in to view your orders, return or adjust your personal information
+                    </p>
+                    <div class="account__links">
+                        <a href="sign-up.html" class="account__links-create">Create account</a>
+                        <a href="login.html" class="account__links-login">Login</a>
+                    </div>
+                </div>
+            </div>
+            </nav>
+            <!-- end of navbar -->
         </div>
 
-        <!-- icons -->
-        <div class="nav-icons">
-            <span class="material-icons">search</span>
-            <span class="material-icons material-icons--hide">person</span>
-            <span class="material-icons material-icons--hide">favorite_border</span>
-            <span class="material-icons">shopping_bag</span>
-        </div>
     </header>
+
 
     <main class="sign-up">
         <section class="form__container">
             <h2>Create an account</h2>
+            <p>Get first access to the very best of Sprints products, inspiration and community.</p>
             <form class="form form__signIn">
                 <!-- email -->
                 <label for="email">Email address
@@ -216,6 +282,9 @@
 
     <!-- js scripts -->
     <script src="js/form.js"></script>
+        <script src="app.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
