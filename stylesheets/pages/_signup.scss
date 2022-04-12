@@ -1,5 +1,11 @@
 .sign-up{
-    padding: 8rem 0 8rem 0;
+    padding: 4rem  0;
+
+    a{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 }
 
 

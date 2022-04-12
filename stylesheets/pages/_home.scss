@@ -4,38 +4,51 @@
 
 
 .cat {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    height: 600px;
+
+    min-height: 600px;
     width: 100%;
     color: white;
-    background-color: black;
-    gap: 5rem;
-    padding: 2.5rem;
+    padding: 2rem;
+
 
 
     &__wrapper {
         width: 100%;
-        height: 100%;
+        height: 900px;
         position: relative;
+        max-width: 1400px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 5rem;
+        margin: auto;
+            @media (min-width: 800px) {
+        height: 500px !important;
+    }
     }
 
     &__image {
-        background-image: url("../assets/images/cats/mens.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         width: 100%;
         height: 100%;
+        transition: transform .5s ease;
+    }
 
-        &::nth-of-type(2) {
-            background-image: url("../assets/images/cats/womens.jpg");
+
+    &__cards {
+        position: relative;
+        min-height: 100%;
+        border: 2px solid rgb(0, 0, 0);
+        overflow: hidden;
+
+        &:hover {
+            .cat__image {
+                transform: scale(1.1);
+            }
         }
     }
 
     &__card {
         padding: 70px;
-        border: 1px solid white;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -65,6 +78,7 @@
     margin: 80px auto 150px auto;
     padding: 0 50px;
     max-width: 400px;
+
     a {
         font-family: $primary-font-stack;
         letter-spacing: 1px;
@@ -79,7 +93,7 @@
         &:hover {
             background-color: #275EFE;
             color: white;
-            box-shadow: 5px 5px 0px 2px rgba(0,0,0,0.9);
+            box-shadow: 5px 5px 0px 2px rgba(0, 0, 0, 0.9);
         }
     }
 }
@@ -154,11 +168,11 @@
 
 @keyframes marquee {
     0% {
-        transform: translate3d(var(--move-initial), 0, 0) ;
+        transform: translate3d(var(--move-initial), 0, 0);
     }
 
     100% {
-        transform: translate3d(var(--move-final), 0, 0) ;
+        transform: translate3d(var(--move-final), 0, 0);
     }
 }
 
@@ -175,63 +189,63 @@ $white: #efefef;
 
 
 
-  
 
-    .items {
-        position: relative;
+
+.items {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+}
+
+.items::-webkit-scrollbar {
+    height: .8rem;
+    border-radius: 20px;
+}
+
+.items::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    width: 80%;
+}
+
+.items::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 20px;
+}
+
+.active {
+    background: rgba(255, 255, 255, 0.3);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+}
+
+.item {
+    display: inline-block;
+    min-height: 400px;
+    min-width: 400px;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+
+    img {
         width: 100%;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-        transition: all 0.2s;
-        transform: scale(0.98);
-        will-change: transform;
-        user-select: none;
-        cursor: pointer;
     }
 
-    .items::-webkit-scrollbar {
-        height: .8rem;
-        border-radius: 20px;
+    @media screen and (max-width: 500px) {
+        min-height: 300px;
+        min-width: 300px;
+
+
     }
-
-    .items::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        border-radius: 20px;
-        width: 80%;
-    }
-
-    .items::-webkit-scrollbar-thumb {
-        background-color: darkgrey;
-        outline: 1px solid slategrey;
-        border-radius: 20px;
-    }
-
-    .active {
-        background: rgba(255, 255, 255, 0.3);
-        cursor: grabbing;
-        cursor: -webkit-grabbing;
-        transform: scale(1);
-    }
-
-    .item {
-        display: inline-block;
-        min-height: 400px;
-        min-width: 400px;
-        margin-right: 2rem;
-        margin-bottom: 3rem;
-
-           img {
-            width: 100%;
-        }
-
-        @media screen and (max-width: 500px) {
-            min-height: 300px;
-            min-width: 300px;
-
-         
-        }
-    }
+}
 
 
 .product__desc {
