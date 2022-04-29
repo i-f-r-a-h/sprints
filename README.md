@@ -9,7 +9,7 @@
   <br>
 </h1>
 
-<h4 align="center">A modern trainer e-commerce website<</h4>
+<h4 align="center">A modern trainer e-commerce website</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
